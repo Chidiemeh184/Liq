@@ -13,6 +13,7 @@
 		EFEFED582033F81B001BD137 /* Liq.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFEFED562033F81B001BD137 /* Liq.xcdatamodeld */; };
 		EFEFED5A2033F81B001BD137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEFED592033F81B001BD137 /* Assets.xcassets */; };
 		EFEFED5D2033F81B001BD137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEFED5B2033F81B001BD137 /* LaunchScreen.storyboard */; };
+		EFEFED672033F9F6001BD137 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFED662033F9F6001BD137 /* Drink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EFEFED592033F81B001BD137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFEFED5C2033F81B001BD137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFEFED5E2033F81B001BD137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFEFED662033F9F6001BD137 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		EFEFED4E2033F81B001BD137 /* Liq */ = {
 			isa = PBXGroup;
 			children = (
+				EFEFED642033F929001BD137 /* Model */,
 				EFEFED4F2033F81B001BD137 /* AppDelegate.swift */,
 				EFEFED512033F81B001BD137 /* ViewController.swift */,
 				EFEFED532033F81B001BD137 /* Main.storyboard */,
 				EFEFED592033F81B001BD137 /* Assets.xcassets */,
 				EFEFED5B2033F81B001BD137 /* LaunchScreen.storyboard */,
 				EFEFED5E2033F81B001BD137 /* Info.plist */,
-				EFEFED562033F81B001BD137 /* Liq.xcdatamodeld */,
 			);
 			path = Liq;
+			sourceTree = "<group>";
+		};
+		EFEFED642033F929001BD137 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFED562033F81B001BD137 /* Liq.xcdatamodeld */,
+				EFEFED652033F951001BD137 /* API */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EFEFED652033F951001BD137 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFED662033F9F6001BD137 /* Drink.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +160,7 @@
 			files = (
 				EFEFED582033F81B001BD137 /* Liq.xcdatamodeld in Sources */,
 				EFEFED522033F81B001BD137 /* ViewController.swift in Sources */,
+				EFEFED672033F9F6001BD137 /* Drink.swift in Sources */,
 				EFEFED502033F81B001BD137 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
