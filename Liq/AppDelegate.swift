@@ -21,26 +21,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
   
-            let urlString = "http://lcboapi.com/products?access_key=MDplNzUyZjc2YS0xMTU5LTExZTgtODg1MS04YjI3OWNhN2MxMWM6NHlLVGc1MWRNdFBrOWNBcmxlcHBHYWNLdWVzNnl6RlZtTmI4"
-            let url = URL(string: urlString)
-            let service = NetworkProcessor(url: url!)
+            let urlString = "http://lcboapi.com/products?access_key=MDplNzUyZjc2YS0xMTU5LTExZTgtODg1MS04YjI3OWNhN2MxMWM6NHlLVGc1MWRNdFBrOWNBcmxlcHBHYWNLdWVzNnl6RlZtTmI4?page=1?per_page=150"
         
-        service.downloadJSONFromURL { (result) in
-            guard let drinksrep = result  as? DrinkResponse else { return }
-            let result = drinksrep.result
-            print("Result = \(result.count)")
-             //print("Result = \(drinksrep)")
-            
-            do{
-                let jsonEncoder = JSONEncoder()
-                let jsonData = try jsonEncoder.encode(drinksrep)
-                let jsonString = String(data: jsonData, encoding: .utf8)
-                print(jsonString!)
-            }catch {
-                fatalError("Error encoding")
-            }
-
-        }
+//        
+//            let url = URL(string: urlString)
+//            let service = NetworkProcessor(url: url!)
+//        
+//        service.downloadJSONFromURL { (result) in
+//            guard let drinksrep = result  as? DrinkResponse else { return }
+//            let result = drinksrep.result
+//            //print("Result = \(result.count)")
+//             print("Result = \(drinksrep)")
+//            
+//            do{
+//                let jsonEncoder = JSONEncoder()
+//                let jsonData = try jsonEncoder.encode(drinksrep)
+//                let jsonString = String(data: jsonData, encoding: .utf8)
+//                print(jsonString!)
+//            }catch {
+//                fatalError("Error encoding")
+//            }
+//
+//        }
 
         
         
