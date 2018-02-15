@@ -13,10 +13,38 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+//access_key=MDoxZGM4YzEyNC0wZGJmLTExZTgtOWY5OC0xMzBmNThhZGUyNWM6bFIyRERBRnJkYzBKQW4zcjhsYWZDdUQ4RG00VWh5SmdkMUJK
+// MDpkY2JlNzk4Mi0xMTU5LTExZTgtYTFhYy1iNzBmYWI2ZmMzOGQ6QTkydVQ3YXhWcWFmZGRDQTVFZ0xaZGxhRVRoeFJNUHA3dEFs
+// MDplMWNhOGUyMC0xMTU5LTExZTgtOTE2Yy1hYjliODk2ODY1ZjE6bTFHUGllT2taenY4RlN6MDV3ZkFhYTlYRlZ4QWF0YVZwdUVz
+// MDplNzUyZjc2YS0xMTU5LTExZTgtODg1MS04YjI3OWNhN2MxMWM6NHlLVGc1MWRNdFBrOWNBcmxlcHBHYWNLdWVzNnl6RlZtTmI4
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+  
+            let urlString = "http://lcboapi.com/products?access_key=MDplNzUyZjc2YS0xMTU5LTExZTgtODg1MS04YjI3OWNhN2MxMWM6NHlLVGc1MWRNdFBrOWNBcmxlcHBHYWNLdWVzNnl6RlZtTmI4"
+            let url = URL(string: urlString)
+            let service = NetworkProcessor(url: url!)
+        
+        service.downloadJSONFromURL { (result) in
+            guard let drinksrep = result  as? DrinkResponse else { return }
+            let result = drinksrep.result
+            print("Result = \(result.count)")
+             //print("Result = \(drinksrep)")
+            
+            do{
+                let jsonEncoder = JSONEncoder()
+                let jsonData = try jsonEncoder.encode(drinksrep)
+                let jsonString = String(data: jsonData, encoding: .utf8)
+                print(jsonString!)
+            }catch {
+                fatalError("Error encoding")
+            }
+
+        }
+
+        
+        
+        
         return true
     }
 

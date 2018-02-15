@@ -10,10 +10,12 @@
 		EFEFED502033F81B001BD137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFED4F2033F81B001BD137 /* AppDelegate.swift */; };
 		EFEFED522033F81B001BD137 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFED512033F81B001BD137 /* ViewController.swift */; };
 		EFEFED552033F81B001BD137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEFED532033F81B001BD137 /* Main.storyboard */; };
-		EFEFED582033F81B001BD137 /* Liq.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFEFED562033F81B001BD137 /* Liq.xcdatamodeld */; };
 		EFEFED5A2033F81B001BD137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEFED592033F81B001BD137 /* Assets.xcassets */; };
 		EFEFED5D2033F81B001BD137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEFED5B2033F81B001BD137 /* LaunchScreen.storyboard */; };
 		EFEFED672033F9F6001BD137 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFED662033F9F6001BD137 /* Drink.swift */; };
+		EFEFED6A2034094D001BD137 /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFED692034094D001BD137 /* NetworkProcessor.swift */; };
+		EFEFED6C2034096C001BD137 /* DrinksFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFED6B2034096C001BD137 /* DrinksFetchService.swift */; };
+		EFEFED6E2034099E001BD137 /* DrinksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFED6D2034099E001BD137 /* DrinksResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +23,13 @@
 		EFEFED4F2033F81B001BD137 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEFED512033F81B001BD137 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFEFED542033F81B001BD137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EFEFED572033F81B001BD137 /* Liq.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Liq.xcdatamodel; sourceTree = "<group>"; };
 		EFEFED592033F81B001BD137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFEFED5C2033F81B001BD137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFEFED5E2033F81B001BD137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFEFED662033F9F6001BD137 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		EFEFED692034094D001BD137 /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
+		EFEFED6B2034096C001BD137 /* DrinksFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksFetchService.swift; sourceTree = "<group>"; };
+		EFEFED6D2034099E001BD137 /* DrinksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 				EFEFED592033F81B001BD137 /* Assets.xcassets */,
 				EFEFED5B2033F81B001BD137 /* LaunchScreen.storyboard */,
 				EFEFED5E2033F81B001BD137 /* Info.plist */,
+				EFEFED682034091D001BD137 /* Network */,
 			);
 			path = Liq;
 			sourceTree = "<group>";
@@ -72,7 +77,6 @@
 		EFEFED642033F929001BD137 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EFEFED562033F81B001BD137 /* Liq.xcdatamodeld */,
 				EFEFED652033F951001BD137 /* API */,
 			);
 			path = Model;
@@ -82,8 +86,18 @@
 			isa = PBXGroup;
 			children = (
 				EFEFED662033F9F6001BD137 /* Drink.swift */,
+				EFEFED6D2034099E001BD137 /* DrinksResponse.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		EFEFED682034091D001BD137 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFED692034094D001BD137 /* NetworkProcessor.swift */,
+				EFEFED6B2034096C001BD137 /* DrinksFetchService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,10 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFEFED582033F81B001BD137 /* Liq.xcdatamodeld in Sources */,
+				EFEFED6E2034099E001BD137 /* DrinksResponse.swift in Sources */,
+				EFEFED6C2034096C001BD137 /* DrinksFetchService.swift in Sources */,
 				EFEFED522033F81B001BD137 /* ViewController.swift in Sources */,
 				EFEFED672033F9F6001BD137 /* Drink.swift in Sources */,
 				EFEFED502033F81B001BD137 /* AppDelegate.swift in Sources */,
+				EFEFED6A2034094D001BD137 /* NetworkProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,19 +362,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EFEFED562033F81B001BD137 /* Liq.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EFEFED572033F81B001BD137 /* Liq.xcdatamodel */,
-			);
-			currentVersion = EFEFED572033F81B001BD137 /* Liq.xcdatamodel */;
-			path = Liq.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EFEFED442033F81B001BD137 /* Project object */;
 }

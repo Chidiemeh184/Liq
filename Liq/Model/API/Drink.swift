@@ -10,57 +10,57 @@ import Foundation
 
 
 struct Drink : Codable {
-    var id : Int
-    var isDead : Bool
-    var name : String
-    var tags : String
-    var isDiscontinued : Bool
-    var priceInCents : Int
-    var regularPriceInCents : Int
-    var limitedTimeOfferSavingsInCents : Int
-    var limitedTimeOfferEndsOn : Int?   //Check
-    var bonusRewardMiles : Int
-    var bonusRewardMilesEndsOn : Int?           //Check
-    var stockType : String
-    var primaryCategory : String
-    var secondaryCategory : String
-    var origin : String
-    var package : String
-    var packageUnitType : String
-    var packageUnitVolumeInMilliliters : Int
-    var totalPackageUnits : Int
-    var volumeInMilliliters : Int
-    var alcoholContent : Int
-    var pricePerLiterOfAlcoholInCents : Int
-    var pricePerLiterInCents : Int
-    var inventoryCount : Int
-    var inventoryVolumeInMilliliters : Int
-    var inventoryPriceInCents : Int
-    var sugarContent : Int?             //Check
-    var producerName : String
-    var releasedOn : Date
-    var hasValueAddedPromotion : Bool
-    var hasLimitedTimeOffer : Bool
-    var hasBonusRewardMiles : Bool
-    var isSeasonal : Bool
-    var isVqa : Bool
-    var isOcb : Bool
-    var isKosher : Bool
-    var valueAddedPromotionDescription : String?   //Check
-    var description : String?       //C
-    var servingSuggestion : String
-    var tastingNote : String
-    var updatedAt : Date
+    var id : Int?
+    var isDead : Bool?
+    var name : String?
+    var tags : String?
+    var isDiscontinued : Bool?
+    var priceInCents : Int?
+    var regularPriceInCents : Int?
+    var limitedTimeOfferSavingsInCents : Int?
+    var limitedTimeOfferEndsOn : String?   // n/a
+    var bonusRewardMiles : Int?
+    var bonusRewardMilesEndsOn : Int?           // n/a
+    var stockType : String?
+    var primaryCategory : String?
+    var secondaryCategory : String?
+    var origin : String?
+    var package : String?
+    var packageUnitType : String?
+    var packageUnitVolumeInMilliliters : Int?
+    var totalPackageUnits : Int?
+    var volumeInMilliliters : Int?
+    var alcoholContent : Int?
+    var pricePerLiterOfAlcoholInCents : Int?
+    var pricePerLiterInCents : Int?
+    var inventoryCount : Int?
+    var inventoryVolumeInMilliliters : Int?
+    var inventoryPriceInCents : Int?
+    var sugarContent : String?             // n/a
+    var producerName : String?
+    var releasedOn : String?
+    var hasValueAddedPromotion : Bool?
+    var hasLimitedTimeOffer : Bool?
+    var hasBonusRewardMiles : Bool?
+    var isSeasonal : Bool?
+    var isVqa : Bool?
+    var isOcb : Bool?
+    var isKosher : Bool?
+    var valueAddedPromotionDescription : String?   // n/a
+    var description : String?       // n/a
+    var servingSuggestion : String?
+    var tastingNote : String?
+    var updatedAt : String?
     
-    var imageThumbUrl : URL
-    var imageUrl : URL
-    var varietal : String
-    var style : String
-    var tertiaryCategory : String
-    var sugarInGramsPerLiter : Int      //C
-    var clearanceSaleSavingsInCents : Int
-    var hasClearanceSale : Bool
-    var productNo : Int
+    var imageThumbUrl : URL?
+    var imageUrl : URL?
+    var varietal : String?
+    var style : String?
+    var tertiaryCategory : String?
+    var sugarInGramsPerLiter : Int?      // n/a
+    var clearanceSaleSavingsInCents : Int?
+    var hasClearanceSale : Bool?
+    var productNo : Int?
 
     
     
