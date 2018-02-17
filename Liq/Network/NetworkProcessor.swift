@@ -26,7 +26,7 @@ class NetworkProcessor {
     //Downloads json for a url
     func downloadJSONFromURL(_ completion : @escaping JSONObject ){
         var request = URLRequest(url: url)
-    request.addValue("Token MDoxZGM4YzEyNC0wZGJmLTExZTgtOWY5OC0xMzBmNThhZGUyNWM6bFIyRERBRnJkYzBKQW4zcjhsYWZDdUQ4RG00VWh5SmdkMUJK", forHTTPHeaderField: "Authorization")
+    request.addValue("Token  MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6", forHTTPHeaderField: "Authorization")
     
         
         let dataTask = session.dataTask(with: request) { (data, response, error) in

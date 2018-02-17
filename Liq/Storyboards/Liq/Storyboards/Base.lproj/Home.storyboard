@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="8Lg-CE-iJY">
             <objects>
-                <viewController id="Vdr-YD-VUT" sceneMemberID="viewController">
+                <viewController id="Vdr-YD-VUT" customClass="HomeViewController" customModule="Liq" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iXU-8d-eeM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,9 @@
                                                 <segment title="Fresh"/>
                                                 <segment title="Seen"/>
                                             </segments>
+                                            <connections>
+                                                <action selector="valueTapped:" destination="Vdr-YD-VUT" eventType="valueChanged" id="B9I-gK-Inr"/>
+                                            </connections>
                                         </segmentedControl>
                                     </barButtonItem>
                                 </items>
@@ -41,7 +44,8 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNA-yt-N9j">
-                                <rect key="frame" x="0.0" y="44" width="375" height="507"/>
+                                <rect key="frame" x="0.0" y="197" width="375" height="354"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="H52-KL-lk6" kind="embed" id="7Cw-lg-AY0"/>
                                 </connections>
@@ -50,20 +54,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3rh-d7-7Ks" firstAttribute="bottom" secondItem="U9B-0F-B6B" secondAttribute="bottom" id="0QW-oB-jzj"/>
-                            <constraint firstItem="KNA-yt-N9j" firstAttribute="bottom" secondItem="U9B-0F-B6B" secondAttribute="bottom" id="3Ew-qZ-lF6"/>
+                            <constraint firstItem="KNA-yt-N9j" firstAttribute="top" secondItem="grH-q1-AeA" secondAttribute="bottom" constant="153" id="5BY-zh-FwZ"/>
                             <constraint firstItem="grH-q1-AeA" firstAttribute="trailing" secondItem="U9B-0F-B6B" secondAttribute="trailing" id="OWf-JV-FHO"/>
                             <constraint firstItem="grH-q1-AeA" firstAttribute="leading" secondItem="U9B-0F-B6B" secondAttribute="leading" id="RzP-tr-P7U"/>
-                            <constraint firstItem="KNA-yt-N9j" firstAttribute="trailing" secondItem="U9B-0F-B6B" secondAttribute="trailing" id="XQb-W2-GR2"/>
-                            <constraint firstItem="KNA-yt-N9j" firstAttribute="leading" secondItem="U9B-0F-B6B" secondAttribute="leading" id="ehA-zA-9Xv"/>
                             <constraint firstItem="3rh-d7-7Ks" firstAttribute="top" secondItem="grH-q1-AeA" secondAttribute="bottom" id="fjK-l6-AmE"/>
                             <constraint firstItem="3rh-d7-7Ks" firstAttribute="leading" secondItem="U9B-0F-B6B" secondAttribute="leading" id="jY5-os-r4M"/>
-                            <constraint firstItem="KNA-yt-N9j" firstAttribute="top" secondItem="grH-q1-AeA" secondAttribute="bottom" id="mTt-bu-kNr"/>
+                            <constraint firstItem="KNA-yt-N9j" firstAttribute="trailing" secondItem="U9B-0F-B6B" secondAttribute="trailing" id="ln2-Y4-cJ0"/>
+                            <constraint firstItem="KNA-yt-N9j" firstAttribute="bottom" secondItem="U9B-0F-B6B" secondAttribute="bottom" id="rbd-Jl-wEe"/>
                             <constraint firstItem="3rh-d7-7Ks" firstAttribute="trailing" secondItem="U9B-0F-B6B" secondAttribute="trailing" id="sY0-Hx-Lvj"/>
                             <constraint firstItem="grH-q1-AeA" firstAttribute="top" secondItem="U9B-0F-B6B" secondAttribute="top" id="yQR-vr-ZJn"/>
+                            <constraint firstItem="KNA-yt-N9j" firstAttribute="leading" secondItem="U9B-0F-B6B" secondAttribute="leading" id="yum-Np-eWn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U9B-0F-B6B"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="rKB-Eh-gAB"/>
+                    <connections>
+                        <outlet property="beerSelectorSegmentedControl" destination="9J9-gd-72D" id="Qnf-qr-ieb"/>
+                        <outlet property="freshBeersContainerView" destination="3rh-d7-7Ks" id="ClO-lP-ONl"/>
+                        <outlet property="seenBeersContainerView" destination="KNA-yt-N9j" id="Kw7-VY-5lS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFt-ta-ZlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,9 +117,9 @@
             <objects>
                 <collectionViewController id="H52-KL-lk6" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fsb-wq-h0I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="507"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="354"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XL2-h5-oya">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>

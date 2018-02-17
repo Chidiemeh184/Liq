@@ -19,30 +19,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MDplNzUyZjc2YS0xMTU5LTExZTgtODg1MS04YjI3OWNhN2MxMWM6NHlLVGc1MWRNdFBrOWNBcmxlcHBHYWNLdWVzNnl6RlZtTmI4
     
     
+//     "http://lcboapi.com/products?access_key=MDplNzUyZjc2YS0xMTU5LTExZTgtODg1MS04YjI3OWNhN2MxMWM6NHlLVGc1MWRNdFBrOWNBcmxlcHBHYWNLdWVzNnl6RlZtTmI4?page=1?per_page=150"
+    
+   // https://ACCESS_KEY:MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6@lcboapi.com/products?page=1?per_page=150
+    
+//MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
   
-            let urlString = "http://lcboapi.com/products?access_key=MDplNzUyZjc2YS0xMTU5LTExZTgtODg1MS04YjI3OWNhN2MxMWM6NHlLVGc1MWRNdFBrOWNBcmxlcHBHYWNLdWVzNnl6RlZtTmI4?page=1?per_page=150"
+            let urlString = "https://ACCESS_KEY:MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6@lcboapi.com/products?page=1?per_page=10"
         
-//        
-//            let url = URL(string: urlString)
-//            let service = NetworkProcessor(url: url!)
-//        
-//        service.downloadJSONFromURL { (result) in
-//            guard let drinksrep = result  as? DrinkResponse else { return }
-//            let result = drinksrep.result
-//            //print("Result = \(result.count)")
-//             print("Result = \(drinksrep)")
-//            
-//            do{
-//                let jsonEncoder = JSONEncoder()
-//                let jsonData = try jsonEncoder.encode(drinksrep)
-//                let jsonString = String(data: jsonData, encoding: .utf8)
-//                print(jsonString!)
-//            }catch {
-//                fatalError("Error encoding")
-//            }
-//
-//        }
+            let url = URL(string: urlString)
+            let service = NetworkProcessor(url: url!)
+        
+        service.downloadJSONFromURL { (result) in
+            guard let drinksrep = result  as? DrinkResponse else { return }
+            let result = drinksrep.result
+            print("Result = \(result.count)")
+            // print("Result = \(drinksrep)")
+            
+            do{
+                let jsonEncoder = JSONEncoder()
+                let jsonData = try jsonEncoder.encode(drinksrep)
+                let jsonString = String(data: jsonData, encoding: .utf8)
+                print(jsonString!)
+            }catch {
+                fatalError("Error encoding")
+            }
+
+        }
 
         
         
