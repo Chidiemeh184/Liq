@@ -15,10 +15,6 @@ class HomeTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        refresher = UIRefreshControl()
-//        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
-//        refresher.addTarget(self, action: #selector(HomeTVC.fetchNewBeer), for: .valueChanged)
-//        tableView.addSubview(refresher)
         
     }
 
@@ -34,7 +30,17 @@ class HomeTVC: UITableViewController {
 
 
 
-
+// MARK: - HEADER
+extension HomeTVC {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let segmentHeader = Bundle.main.loadNibNamed("HeaderSegment", owner: self, options: nil)?.first as! HeaderSegment
+        return segmentHeader
+    }
+}
 
 
 
