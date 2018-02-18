@@ -11,15 +11,41 @@ import UIKit
 class HomeTVC: UITableViewController {
 
     var refresher : UIRefreshControl!
+    @IBOutlet weak var drinkTypeSegmentedControl: UISegmentedControl!
+    
+    
+    @IBOutlet weak var freshContainerView: UIView!
+    @IBOutlet weak var seenContainerView: UIView!
+    
+    @IBOutlet weak var switchViewSegmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        freshContainerView.isHidden = false
+        seenContainerView.isHidden = true
         
     }
 
-   @IBAction func fetchNewBeer(){
     
+    @IBAction func segmentControlSwitched(_ sender: UISegmentedControl) {
+        
+        switch switchViewSegmentedControl.selectedSegmentIndex {
+        case 0:
+            freshContainerView.isHidden = false
+            seenContainerView.isHidden = true
+        case 1:
+            freshContainerView.isHidden = true
+            seenContainerView.isHidden = false
+        default:
+            break
+        }
+    }
+    
+ 
+    
+    
+   @IBAction func fetchNewBeer(){
         refreshControl?.beginRefreshing()
         print("Fetching Fresh Beer....")
         refreshControl?.endRefreshing()
@@ -30,38 +56,16 @@ class HomeTVC: UITableViewController {
 
 
 
-// MARK: - HEADER
-extension HomeTVC {
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
-    }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let segmentHeader = Bundle.main.loadNibNamed("HeaderSegment", owner: self, options: nil)?.first as! HeaderSegment
-        return segmentHeader
-    }
-}
-
-
-
-// MARK: - HEIGHT
-extension HomeTVC {
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 234
-    }
-}
-
-
 
 // MARK: - DATA SOURCE
 extension HomeTVC {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 0
     }
     
     
