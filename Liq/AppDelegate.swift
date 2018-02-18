@@ -25,28 +25,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 //MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-  
-            let urlString = "https://ACCESS_KEY:MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6@lcboapi.com/products?page=1?per_page=10"
-        
-            let url = URL(string: urlString)
-            let service = NetworkProcessor(url: url!)
-        
-        service.downloadJSONFromURL { (result) in
-            guard let drinksrep = result  as? DrinkResponse else { return }
-            let result = drinksrep.result
-            print("Result = \(result.count)")
-            // print("Result = \(drinksrep)")
-            
-            do{
-                let jsonEncoder = JSONEncoder()
-                let jsonData = try jsonEncoder.encode(drinksrep)
-                let jsonString = String(data: jsonData, encoding: .utf8)
-                print(jsonString!)
-            }catch {
-                fatalError("Error encoding")
-            }
-
-        }
+//  
+//            let urlString = "https://ACCESS_KEY:MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6@lcboapi.com/products?page=1?per_page=10"
+//        
+//            let url = URL(string: urlString)
+//            let service = NetworkProcessor(url: url!)
+//        
+//        service.downloadJSONFromURL { (result) in
+//            guard let drinksrep = result  as? DrinkResponse else { return }
+//            let result = drinksrep.result
+//            print("Result = \(result.count)")
+//            // print("Result = \(drinksrep)")
+//            
+//            do{
+//                let jsonEncoder = JSONEncoder()
+//                let jsonData = try jsonEncoder.encode(drinksrep)
+//                let jsonString = String(data: jsonData, encoding: .utf8)
+//                print(jsonString!)
+//            }catch {
+//                fatalError("Error encoding")
+//            }
+//
+//        }
 
         
         
