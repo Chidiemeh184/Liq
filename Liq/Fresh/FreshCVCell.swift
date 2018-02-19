@@ -10,4 +10,11 @@ import UIKit
 
 class FreshCVCell: UICollectionViewCell {
     
+    @IBOutlet weak var backShadowView: ShadowView!
+    @IBOutlet weak var drinkImageView: UIImageView!
+    
+    override func awakeFromNib() {
+       self.makeDropShadow()
+    }
+    
 }

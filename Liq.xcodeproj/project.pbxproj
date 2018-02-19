@@ -19,6 +19,7 @@
 		EF61AC88203AE99D00F2887D /* FreshCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61AC87203AE99D00F2887D /* FreshCVCell.swift */; };
 		EF61AC8A203AF25B00F2887D /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = EF61AC89203AF25B00F2887D /* data.json */; };
 		EF61AC8D203AF48700F2887D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61AC8C203AF48700F2887D /* ShadowView.swift */; };
+		EF61AC8F203AF84E00F2887D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61AC8E203AF84E00F2887D /* Extensions.swift */; };
 		EFEFED502033F81B001BD137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFED4F2033F81B001BD137 /* AppDelegate.swift */; };
 		EFEFED522033F81B001BD137 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFED512033F81B001BD137 /* ViewController.swift */; };
 		EFEFED552033F81B001BD137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEFED532033F81B001BD137 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		EF61AC87203AE99D00F2887D /* FreshCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshCVCell.swift; sourceTree = "<group>"; };
 		EF61AC89203AF25B00F2887D /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		EF61AC8C203AF48700F2887D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		EF61AC8E203AF84E00F2887D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EFEFED4C2033F81B001BD137 /* Liq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEFED4F2033F81B001BD137 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEFED512033F81B001BD137 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				EF61AC8C203AF48700F2887D /* ShadowView.swift */,
+				EF61AC8E203AF84E00F2887D /* Extensions.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				EFEFED502033F81B001BD137 /* AppDelegate.swift in Sources */,
 				EF61AC7D2039B05700F2887D /* HeaderSegment.swift in Sources */,
 				EF3BC71320399EE100B1854B /* Cell.swift in Sources */,
+				EF61AC8F203AF84E00F2887D /* Extensions.swift in Sources */,
 				EF1766CE2035E163000693DF /* HomeViewController.swift in Sources */,
 				EF61AC86203AE93800F2887D /* FreshVC.swift in Sources */,
 				EF3BC71120399E4500B1854B /* HomeTVC.swift in Sources */,
