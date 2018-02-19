@@ -24,6 +24,7 @@ class HomeTVC: UITableViewController {
         
         freshContainerView.isHidden = false
         seenContainerView.isHidden = true
+    
         
     }
 

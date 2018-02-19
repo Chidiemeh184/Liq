@@ -42,7 +42,9 @@
         <scene sceneID="S1r-MQ-QQU">
             <objects>
                 <navigationController storyboardIdentifier="FavoriteScene" automaticallyAdjustsScrollViewInsets="NO" id="cJb-7Y-heG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="beerHeart" id="St9-ho-HTk"/>
+                    <tabBarItem key="tabBarItem" image="beerHeart" id="St9-ho-HTk">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iop-TD-w55">

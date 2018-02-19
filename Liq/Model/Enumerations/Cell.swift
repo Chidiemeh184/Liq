@@ -11,7 +11,11 @@ import Foundation
 
 enum Cell : String {
     
+    //Tableviews
     case homeTVCell = "homeTVCell"
     
+    
+    //Collectionviews
+    case freshCVCell = "freshCVCell"
     
 }
