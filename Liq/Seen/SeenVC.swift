@@ -1,5 +1,5 @@
 //
-//  FreshVC.swift
+//  SeenVC.swift
 //  Liq
 //
 //  Created by Chidi Emeh on 2/19/18.
@@ -8,16 +8,19 @@
 
 import UIKit
 
-class FreshVC: UIViewController {
+class SeenVC: UIViewController {
 
     
-    @IBOutlet weak var freshCollectionView: UICollectionView!
+    @IBOutlet weak var seenCollectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        freshCollectionView.delegate = self
-        freshCollectionView.dataSource = self
+        seenCollectionView.dataSource = self
+        seenCollectionView.delegate = self
+
     }
+
 
     /*
     // MARK: - Navigation
@@ -32,8 +35,11 @@ class FreshVC: UIViewController {
 }
 
 
+
+
+
 //MARK: - FLOW LAYOUT
-extension FreshVC : UICollectionViewDelegateFlowLayout {
+extension SeenVC : UICollectionViewDelegateFlowLayout {
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -49,7 +55,6 @@ extension FreshVC : UICollectionViewDelegateFlowLayout {
         let customWidth = collectionView.frame.size.width/2
         
         let size = CGSize(width: customWidth - 50, height: 200)  //20 260 (100, 180) //(width: customWidth - 100, height: 180)
-        
         return size
         
     }
@@ -66,14 +71,14 @@ extension FreshVC : UICollectionViewDelegateFlowLayout {
 
 
 //MARK: - DATASOURCE
-extension FreshVC : UICollectionViewDelegate, UICollectionViewDataSource {
+extension SeenVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 11
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.freshCVCell.rawValue, for: indexPath) as! FreshCVCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.seenCVCell.rawValue, for: indexPath) as! SeenCVCell
         return cell
     }
     
@@ -83,3 +88,4 @@ extension FreshVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
     
 }
+

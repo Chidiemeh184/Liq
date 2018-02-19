@@ -17,5 +17,6 @@ enum Cell : String {
     
     //Collectionviews
     case freshCVCell = "freshCVCell"
+    case seenCVCell = "seenCVCell"
     
 }
