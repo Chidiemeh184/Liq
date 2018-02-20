@@ -13,6 +13,7 @@ enum Cell : String {
     
     //Tableviews
     case homeTVCell = "homeTVCell"
+    case listVCell = "listVCell"
     
     
     //Collectionviews

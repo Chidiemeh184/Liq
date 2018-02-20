@@ -20,6 +20,8 @@ class SeenVC: UIViewController {
         seenCollectionView.delegate = self
 
     }
+    
+    
 
 
     /*

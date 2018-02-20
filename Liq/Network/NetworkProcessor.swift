@@ -26,7 +26,9 @@ class NetworkProcessor {
     //Downloads json for a url
     func downloadJSONFromURL(_ completion : @escaping JSONObject ){
         var request = URLRequest(url: url)
-    request.addValue("Token  MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6", forHTTPHeaderField: "Authorization")
+    request.addValue("Token token=MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6", forHTTPHeaderField: "Authorization")
+        request.addValue("x-access-key", forHTTPHeaderField: "Username")
+        request.addValue("MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6", forHTTPHeaderField: "Password")
     
         
         let dataTask = session.dataTask(with: request) { (data, response, error) in
@@ -54,6 +56,45 @@ class NetworkProcessor {
         dataTask.resume()
         
     }
+    
+    
+    //DownloadInventories
+    
+    func downloadInventoriesFromURL(_ completion : @escaping JSONObject ){
+        var request = URLRequest(url: url)
+        request.addValue("Token  token=MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6", forHTTPHeaderField: "Authorization")
+        request.addValue("x-access-key", forHTTPHeaderField: "Username")
+        request.addValue("MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6", forHTTPHeaderField: "Password")
+        
+        let dataTask = session.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                if let httpResponse = response as? HTTPURLResponse {
+                    switch httpResponse.statusCode {
+                    case 200:
+                        if let responseData = data {
+                            do{
+                                var downloadedObject : Codable?
+                                downloadedObject = try JSONDecoder().decode(Inventories.self, from: responseData)
+                                completion(downloadedObject)
+                            }catch let error as NSError {
+                                print("Error decoding: \(error)")
+                            }
+                        }
+                    default:
+                        print("Response Status code: \(httpResponse.statusCode)")
+                    }
+                }
+            }else {
+                print(error?.localizedDescription ?? "Error downloading task")
+            }
+        }
+        dataTask.resume()
+        
+    }
+    
+    
+    
+    
     
     //Downloads ImageData from URL
     func downloadImageDataFromURL( _ completion : @escaping DataHandler ){

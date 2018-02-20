@@ -11,5 +11,5 @@ import Foundation
 struct DrinkResponse : Codable {
     var status : Int
     var message : String?
-    var result : [Drink]
+    var result : Drink
 }

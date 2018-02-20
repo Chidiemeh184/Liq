@@ -25,18 +25,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 //MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//  
-//            let urlString = "https://ACCESS_KEY:MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6@lcboapi.com/products?page=1?per_page=10"
-//        
+  
+//            let urlString = "https://lcboapi.com/products/300681"
+//
 //            let url = URL(string: urlString)
 //            let service = NetworkProcessor(url: url!)
-//        
+//
 //        service.downloadJSONFromURL { (result) in
 //            guard let drinksrep = result  as? DrinkResponse else { return }
 //            let result = drinksrep.result
-//            print("Result = \(result.count)")
-//            // print("Result = \(drinksrep)")
-//            
+//            //print("Result = \(result?.count)")
+//            //print("Result = \(drinksrep)")
+//
 //            do{
 //                let jsonEncoder = JSONEncoder()
 //                let jsonData = try jsonEncoder.encode(drinksrep)
@@ -48,7 +48,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        }
 
-        
+   
+//
+//        let urlString = "https://lcboapi.com/inventories?page=1?per_page=1"
+//
+//                let url = URL(string: urlString)
+//                let service = NetworkProcessor(url: url!)
+//
+//        service.downloadInventoriesFromURL { (Inventories) in
+//            guard let inventories = Inventories as? Inventories else { return }
+//            let pager = inventories.pager
+//
+//
+//            
+//            
+//            do {
+//                let jsonEncoder = JSONEncoder()
+//                let invetoryData = try jsonEncoder.encode(inventories)
+//                let pagerData = try jsonEncoder.encode(pager)
+//                let inventoryString = String(data: invetoryData, encoding: .utf8)
+//                let pagerString = String(data: pagerData, encoding: .utf8)
+//                print(inventoryString)
+//                print("----*********========================================********--------")
+//                //print(pagerString!)
+//                
+//            }catch {
+//                fatalError("Error ending result")
+//            }
+//            
+//        }
+//
+//        
         
         
         return true
