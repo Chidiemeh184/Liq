@@ -35,5 +35,12 @@ class FavTVC: UITableViewController {
         gridContainerView.isHidden = false
     }
     
+    @IBAction func fetchDrinks(_ sender: UIRefreshControl) {
+        refreshControl?.beginRefreshing()
+        print("Fetching Fresh Beer....")
+        refreshControl?.endRefreshing()
+    }
+    
+    
 
 }

@@ -10,15 +10,33 @@ import UIKit
 
 class ListVCell: UITableViewCell {
 
+    //UI Properties
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var drinkImageView: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var alcoholContentLabel: UILabel!
+    @IBOutlet weak var styleLabel: UILabel!
+    @IBOutlet weak var varietalLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setUpViews()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setUpViews(){
+        
+        backView.layer.borderWidth = 0.5
+        backView.layer.borderColor = UIColor.lightGray.cgColor
+        backView.layer.cornerRadius = 4
+        
+        
     }
 
 }
