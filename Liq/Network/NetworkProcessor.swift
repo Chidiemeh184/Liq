@@ -74,7 +74,7 @@ class NetworkProcessor {
                         if let responseData = data {
                             do{
                                 var downloadedObject : Codable?
-                                downloadedObject = try JSONDecoder().decode(Inventories.self, from: responseData)
+                                downloadedObject = try JSONDecoder().decode(DrinksByStore.self, from: responseData)
                                 completion(downloadedObject)
                             }catch let error as NSError {
                                 print("Error decoding: \(error)")

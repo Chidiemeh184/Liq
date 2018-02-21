@@ -27,15 +27,15 @@ struct Store : Codable {
     var inventoryCount : Int?
     var inventoryPriceInCents : Int32?
     var inventoryVolumeInMilliliters : Int32?
-    var hasWheelchairAccessibility : Bool
-    var hasBilingualServices : Bool
-    var hasProductConsultant : Bool
-    var hasTastingBar : Bool
-    var hasBeerColdRoom : Bool
-    var hasSpecialOccasionPermits : Bool
-    var hasVintagesCorner : Bool
-    var hasParking : Bool
-    var hasTransitAccess : Bool
+    var hasWheelchairAccessibility : Bool?
+    var hasBilingualServices : Bool?
+    var hasProductConsultant : Bool?
+    var hasTastingBar : Bool?
+    var hasBeerColdRoom : Bool?
+    var hasSpecialOccasionPermits : Bool?
+    var hasVintagesCorner : Bool?
+    var hasParking : Bool?
+    var hasTransitAccess : Bool?
     var sundayOpen : Int?
     var sundayClose : Int?
     var mondayOpen : Int?
