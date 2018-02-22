@@ -34,3 +34,32 @@ extension UICollectionViewCell {
     }
     
 }
+
+
+extension UIImageView {
+    
+    func downloadImagefromUrl(url : URL?){
+        
+        var downloadeImage = UIImage()
+        
+        guard let imageURL = url else {return}
+        let imageProcessor = NetworkProcessor(url: imageURL)
+        
+        imageProcessor.downloadImageDataFromURL { (data, response, error) in
+            DispatchQueue.main.async {
+                guard let imageData = data else { return }
+                downloadeImage = UIImage(data: imageData)!
+                self.image = downloadeImage
+            }
+        }
+        
+        
+    }
+}
+
+
+
+
+
+
+

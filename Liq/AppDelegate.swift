@@ -49,34 +49,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 
    
-
-        let urlString = "https://lcboapi.com/stores/10/products?page=1?per_page=5"
-
-                let url = URL(string: urlString)
-                let service = NetworkProcessor(url: url!)
-
-        service.downloadInventoriesFromURL { (stores) in
-            guard let stores = stores as? DrinksByStore else { return }
-            let result = stores.result
-            print(result)
-                print("----*********========================================********--------")
-            
-            
-            do {
-                let jsonEncoder = JSONEncoder()
-                let invetoryData = try jsonEncoder.encode(result)
-                //let pagerData = try jsonEncoder.encode(pager)
-                let inventoryString = String(data: invetoryData, encoding: .utf8)
-                //let pagerString = String(data: pagerData, encoding: .utf8)
-                print(inventoryString)
-                print("----*********========================================********--------")
-                print(invetoryData)
-                
-            }catch {
-                fatalError("Error ending result")
-            }
-            
-        }
+//
+//        let urlString = "https://lcboapi.com/stores/10/products?page=1?per_page=5"
+//
+//                let url = URL(string: urlString)
+//                let service = NetworkProcessor(url: url!)
+//
+//        service.downloadInventoriesFromURL { (stores) in
+//            guard let stores = stores as? DrinksByStore else { return }
+//            let result = stores.result
+//            print(result)
+//                print("----*********========================================********--------")
+//            
+//            
+//            do {
+//                let jsonEncoder = JSONEncoder()
+//                let invetoryData = try jsonEncoder.encode(result)
+//                //let pagerData = try jsonEncoder.encode(pager)
+//                let inventoryString = String(data: invetoryData, encoding: .utf8)
+//                //let pagerString = String(data: pagerData, encoding: .utf8)
+//                print(inventoryString)
+//                print("----*********========================================********--------")
+//                print(invetoryData)
+//                
+//            }catch {
+//                fatalError("Error ending result")
+//            }
+//            
+//        }
 
         
         

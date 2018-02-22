@@ -13,7 +13,7 @@ struct DrinksByStore : Codable {
     var status : Int
     var message : String?
     var pager : Pager?
-    var result : [Drink]
+    var result : [Drink]?
     var store : Store?
     var suggestion : String?
     

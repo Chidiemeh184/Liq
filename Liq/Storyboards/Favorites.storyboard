@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,7 +44,7 @@
             <objects>
                 <tableViewController id="p1B-4Y-aZe" customClass="FavTVC" customModule="Liq" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aux-H3-mw7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="8IE-0f-kCU">
@@ -51,7 +52,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="kfm-5m-E2e">
-                                    <rect key="frame" x="137.5" y="15" width="100" height="30"/>
+                                    <rect key="frame" x="137.5" y="15.5" width="100" height="30"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvc-2I-Beh">
                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -120,10 +121,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Fav" id="94v-yB-DIV">
-                        <barButtonItem key="rightBarButtonItem" image="beerSetting" id="u2q-yk-rsp">
-                            <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="beerSetting" id="u2q-yk-rsp">
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="MF5-6A-Kon">
+                                <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <size key="freeformSize" width="375" height="668"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="yba-7S-7tP">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -144,7 +151,7 @@
         <!--ListVC-->
         <scene sceneID="uLl-IU-y3H">
             <objects>
-                <viewController id="3rz-SH-Jfh" customClass="ListVC" customModule="Liq" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListVC" id="3rz-SH-Jfh" customClass="ListVC" customModule="Liq" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RQ0-W0-APV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,20 +285,35 @@
                                                         <constraint firstAttribute="height" constant="98" id="KI9-1q-BDh"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancelBoxBlack" translatesAutoresizingMaskIntoConstraints="NO" id="Cms-c0-rTp">
+                                                    <rect key="frame" x="96" y="0.0" width="26" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="26" id="qmB-HN-TUt"/>
+                                                        <constraint firstAttribute="height" constant="22" id="zA8-Av-pDv"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Cms-c0-rTp" secondAttribute="trailing" id="6Lu-Mr-IkN"/>
                                             <constraint firstItem="xXU-hP-Wfe" firstAttribute="top" secondItem="wi7-Da-dM9" secondAttribute="top" constant="20" id="8LP-Sm-Swi"/>
                                             <constraint firstItem="Moj-gU-LAk" firstAttribute="top" secondItem="2ac-HV-tRC" secondAttribute="bottom" constant="4" id="9Mv-oO-Sge"/>
                                             <constraint firstItem="Moj-gU-LAk" firstAttribute="leading" secondItem="wi7-Da-dM9" secondAttribute="leading" id="FoP-Ib-oA5"/>
                                             <constraint firstAttribute="trailing" secondItem="2ac-HV-tRC" secondAttribute="trailing" id="TjF-5e-StZ"/>
                                             <constraint firstItem="2ac-HV-tRC" firstAttribute="top" secondItem="xXU-hP-Wfe" secondAttribute="bottom" constant="9" id="Vsy-WM-alb"/>
                                             <constraint firstItem="2ac-HV-tRC" firstAttribute="leading" secondItem="wi7-Da-dM9" secondAttribute="leading" id="b1j-38-gWI"/>
+                                            <constraint firstItem="Cms-c0-rTp" firstAttribute="top" secondItem="wi7-Da-dM9" secondAttribute="top" id="kYo-h7-wyY"/>
                                             <constraint firstAttribute="bottom" secondItem="Moj-gU-LAk" secondAttribute="bottom" constant="10" id="sXW-mI-yaq"/>
                                             <constraint firstAttribute="trailing" secondItem="xXU-hP-Wfe" secondAttribute="trailing" constant="28" id="xax-CT-fbV"/>
                                             <constraint firstAttribute="trailing" secondItem="Moj-gU-LAk" secondAttribute="trailing" id="xs8-1t-lRH"/>
                                             <constraint firstItem="xXU-hP-Wfe" firstAttribute="leading" secondItem="wi7-Da-dM9" secondAttribute="leading" constant="28" id="zUS-fX-E7k"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="alcoholContentLabel" destination="Moj-gU-LAk" id="PSO-NF-uWv"/>
+                                            <outlet property="cancelButtonImageview" destination="Cms-c0-rTp" id="IyI-CP-2l0"/>
+                                            <outlet property="drinkImageview" destination="xXU-hP-Wfe" id="QBW-8X-RVE"/>
+                                            <outlet property="nameLabel" destination="2ac-HV-tRC" id="SGv-de-nbt"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -315,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5C-jX-sJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912.79999999999995" y="1924.5877061469266"/>
+            <point key="canvasLocation" x="912.79999999999995" y="1896.7016491754125"/>
         </scene>
     </scenes>
     <resources>
@@ -323,6 +345,7 @@
         <image name="beerHeart" width="20" height="20"/>
         <image name="beerList" width="20" height="22"/>
         <image name="beerSetting" width="20" height="20"/>
+        <image name="cancelBoxBlack" width="100" height="100"/>
         <image name="coors" width="960" height="1280"/>
     </resources>
 </document>

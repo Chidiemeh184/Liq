@@ -19,6 +19,9 @@ class ListVCell: UITableViewCell {
     @IBOutlet weak var styleLabel: UILabel!
     @IBOutlet weak var varietalLabel: UILabel!
     
+    //Class Property
+    var drink : Drink?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpViews()
@@ -30,8 +33,20 @@ class ListVCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUpViews(){
+    
+    func setUpWithDrink(drink : Drink){
         
+        self.drink = drink
+        drinkImageView.downloadImagefromUrl(url: drink.imageUrl)
+        nameLabel.text = drink.name!
+        alcoholContentLabel.text = "\(drink.alcoholContent!/100)% Vol Alc"
+        styleLabel.text = drink.style!
+        varietalLabel.text = drink.varietal!
+        
+    }
+    
+    private func setUpViews(){
+
         backView.layer.borderWidth = 0.5
         backView.layer.borderColor = UIColor.lightGray.cgColor
         backView.layer.cornerRadius = 4
