@@ -120,7 +120,7 @@ extension ListVC {
             guard let drinks = storeJSONData.result else { return }
             
             self.drinks = drinks
-            print("Drinks loaded : \(drinks.count)")
+            //print("Drinks loaded : \(drinks.count)")
         }catch let error as NSError {
             print("Error loading data : \(error)")
         }

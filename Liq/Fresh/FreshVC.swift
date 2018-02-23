@@ -13,6 +13,11 @@ class FreshVC: UIViewController {
     
     @IBOutlet weak var freshCollectionView: UICollectionView!
     
+    //Class Properties
+    var drinks : [Drink]?
+    var refreshedDrinks : [Drink]?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         freshCollectionView.delegate = self
@@ -83,3 +88,26 @@ extension FreshVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
     
 }
+
+
+
+//MARK: - LOAD DATA
+extension FreshVC {
+    
+    func loadData() {
+        let filePath = Bundle.main.path(forResource: "store38", ofType: "json")
+        let url = URL(fileURLWithPath: filePath!)
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let storeJSONData = try JSONDecoder().decode(DrinksByStore.self, from: data)
+            guard let drinks = storeJSONData.result else { return }
+            self.drinks = drinks
+            // print("Drinks loaded : \(drinks.count)")
+        }catch let error as NSError {
+            print("Error loading data : \(error)")
+        }
+    }
+    
+}
+

@@ -14,10 +14,17 @@ class SeenVC: UIViewController {
     @IBOutlet weak var seenCollectionView: UICollectionView!
     
     
+    //Class Properties
+    var drinks : [Drink]?
+    var refreshedDrinks : [Drink]?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         seenCollectionView.dataSource = self
         seenCollectionView.delegate = self
+        
+        loadData()
 
     }
     
@@ -66,21 +73,19 @@ extension SeenVC : UICollectionViewDelegateFlowLayout {
         return inset
     }
     
-    
 }
-
-
 
 
 //MARK: - DATASOURCE
 extension SeenVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 11
+        return (drinks?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.seenCVCell.rawValue, for: indexPath) as! SeenCVCell
+        cell.setUpWithDrink(drink: drinks![indexPath.row])
         return cell
     }
     
@@ -88,6 +93,29 @@ extension SeenVC : UICollectionViewDelegate, UICollectionViewDataSource {
         //Perform Segue
     }
     
+    
+}
+
+
+
+
+//MARK: - LOAD DATA
+extension SeenVC {
+    
+    func loadData() {
+        let filePath = Bundle.main.path(forResource: "store38", ofType: "json")
+        let url = URL(fileURLWithPath: filePath!)
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let storeJSONData = try JSONDecoder().decode(DrinksByStore.self, from: data)
+            guard let drinks = storeJSONData.result else { return }
+            self.drinks = drinks
+           // print("Drinks loaded : \(drinks.count)")
+        }catch let error as NSError {
+            print("Error loading data : \(error)")
+        }
+    }
     
 }
 

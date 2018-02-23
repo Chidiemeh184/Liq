@@ -43,28 +43,26 @@ class GridVC: UIViewController {
         let position = gesture.location(in: gridCollectionView)
         if let indexPath = gridCollectionView.indexPathForItem(at: position){
 
-            
             let cell = gridCollectionView.cellForItem(at: indexPath) as! GridCVCell
-            cell.cancelButtonImageview.isHidden = true
-            print("Position of indexPath : \(indexPath)")
-            removeItemAt(indexPath: indexPath)
-        
+            cell.cancelButtonImageview.isHidden = false
         }
 
     }
     
     
     func removeItemAt(indexPath : IndexPath){
-        gridCollectionView.performBatchUpdates({
-            //Remove item from Datasource before deleting
-            gridCollectionView.deleteItems(at: [indexPath])
-        }) { (finished) in
-            self.gridCollectionView.reloadItems(at: self.gridCollectionView.indexPathsForVisibleItems)
-        }
+        drinks?.remove(at: indexPath.row)
+        self.gridCollectionView.deleteItems(at: [indexPath])
+        print("Items were deleted")
+        self.gridCollectionView.reloadData()
     }
     
+
     
-}
+    
+    
+    
+}//End Class
 
 //MARK: - Gesture Recognizers
 extension GridVC {
@@ -123,8 +121,14 @@ extension GridVC : UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //Perform Segue
+        
+        print("indexPath : \(indexPath)")
+        print("row : \(indexPath.row)")
+        print("section : \(indexPath.section)")
+
+
     }
+    
     
     
 }
@@ -145,7 +149,7 @@ extension GridVC {
             guard let drinks = storeJSONData.result else { return }
             
             self.drinks = drinks
-            print("Drinks loaded : \(drinks.count)")
+            //print("Drinks loaded : \(drinks.count)")
         }catch let error as NSError {
             print("Error loading data : \(error)")
         }
