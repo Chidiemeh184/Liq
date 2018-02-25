@@ -17,49 +17,79 @@ class FreshVC: UIViewController {
     var drinks : [Drink]?
     var refreshedDrinks : [Drink]?
     
-
+    let observeDrinksNotificationName = Notification.Name(NotificationKey.reloadFreshHomeDrinks.rawValue)
+    
+    deinit { NotificationCenter.default.removeObserver(self) }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         freshCollectionView.delegate = self
         freshCollectionView.dataSource = self
-        
         loadData()
-        
+        createObservers()
     }
-
-
-
+    
+    func createObservers(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.loadFreshDrinks), name: observeDrinksNotificationName, object: nil)
+    }
 }
 
+
+//MARK: - INSERT DATA
+extension FreshVC {
+    
+    @objc func loadFreshDrinks(){
+        
+        loadRefreshData()
+        let freshDrinksToAdd = refreshedDrinks![0..<6]
+        var positionCount = 0
+        var newIndices = [IndexPath]()
+        
+        for drink in freshDrinksToAdd {
+            drinks?.append(drink)
+            let indexOfNewDrink = IndexPath(row: positionCount , section: 0)
+            newIndices.append(indexOfNewDrink)
+            positionCount = positionCount + 1
+        }
+        
+        freshCollectionView.performBatchUpdates({
+            freshCollectionView.insertItems(at: newIndices)
+        })
+    }
+}
 
 //MARK: - FLOW LAYOUT
 extension FreshVC : UICollectionViewDelegateFlowLayout {
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 50 //50
+        let lineSpace = CGFloat(50)
+        return lineSpace
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 25 //14
+        let interItemSpace = CGFloat(25)
+        return interItemSpace
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let customWidth = collectionView.frame.size.width/2
+        let customHeight = CGFloat(200)
+        let itemSpace = CGFloat(50)
+        let size = CGSize(width: customWidth - itemSpace, height: customHeight)
         
-        let size = CGSize(width: customWidth - 50, height: 200)  //20 260 (100, 180) //(width: customWidth - 100, height: 180)
+        print("width : \(customWidth), Height : \(customHeight)")
         
         return size
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let inset = UIEdgeInsetsMake(30, 25, 0, 25)  //(30 12 0 12)
+        let topSpace = CGFloat(30), leftSpace = CGFloat(25), bottomSpace = CGFloat(0), rightSpace = CGFloat(25)
+        let inset = UIEdgeInsetsMake(topSpace, leftSpace, bottomSpace, rightSpace)
         return inset
     }
-    
-    
 }
 
 
@@ -100,6 +130,21 @@ extension FreshVC {
             guard let drinks = storeJSONData.result else { return }
             self.drinks = drinks
             // print("Drinks loaded : \(drinks.count)")
+        }catch let error as NSError {
+            print("Error loading data : \(error)")
+        }
+    }
+    
+    
+    func loadRefreshData() {
+        let filePath = Bundle.main.path(forResource: "store217", ofType: "json")
+        let url = URL(fileURLWithPath: filePath!)
+        do {
+            let data = try Data(contentsOf: url)
+            let storeJSONData = try JSONDecoder().decode(DrinksByStore.self, from: data)
+            guard let drinks = storeJSONData.result else { return }
+            self.refreshedDrinks = drinks
+            print("Drinks loaded : \(drinks.count)")
         }catch let error as NSError {
             print("Error loading data : \(error)")
         }

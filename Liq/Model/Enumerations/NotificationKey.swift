@@ -11,4 +11,5 @@ import Foundation
 
 enum NotificationKey : String {
     case reloadFreshDrinks = "com.gmail.chidiemeh184.reloadFreshVCData"
+    case reloadFreshHomeDrinks = "com.gmail.chidiemeh184.reloadFreshHomeDrinks"
 }

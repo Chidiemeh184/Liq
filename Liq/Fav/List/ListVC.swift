@@ -8,22 +8,16 @@
 
 import UIKit
 
-protocol willRefreshDelegate {
-    func loadFreshDrinks()
-}
 
 class ListVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var listTableView: UITableView!
     
-    var refreshDelegate : willRefreshDelegate?
     var drinks : [Drink]?
     var refreshedDrinks : [Drink]?
     let observeDrinksNotificationName = Notification.Name(NotificationKey.reloadFreshDrinks.rawValue)
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
+    deinit { NotificationCenter.default.removeObserver(self) }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var beerSelectorSegmentedControl: UISegmentedControl!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         freshBeersContainerView.isHidden = false
@@ -34,12 +36,7 @@ class HomeViewController: UIViewController {
             break
         }
     }
-    
-    
-    @IBAction func itemSegmentSelected(_ sender: Any) {
-        
 
-    }
-    
+
 
 }

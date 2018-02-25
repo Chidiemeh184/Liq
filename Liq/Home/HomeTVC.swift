@@ -48,7 +48,8 @@ class HomeTVC: UITableViewController {
     
    @IBAction func fetchNewBeer(){
         refreshControl?.beginRefreshing()
-        print("Fetching Fresh Beer....")
+        let notificationPostName = Notification.Name(NotificationKey.reloadFreshHomeDrinks.rawValue)
+        NotificationCenter.default.post(name: notificationPostName, object: nil)
         refreshControl?.endRefreshing()
     }
 
@@ -68,7 +69,6 @@ extension HomeTVC {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
-    
     
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: Cell.homeTVCell.rawValue, for: indexPath) as! HomeTVCell
