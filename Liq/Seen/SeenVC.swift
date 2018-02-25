@@ -28,19 +28,6 @@ class SeenVC: UIViewController {
 
     }
     
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
@@ -52,24 +39,28 @@ extension SeenVC : UICollectionViewDelegateFlowLayout {
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 50 //50
+        let lineSpaceBetweenItems = CGFloat(50)
+        return lineSpaceBetweenItems
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 25 //14
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        let interItemSpace =  CGFloat(25)
+        return interItemSpace
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let customWidth = collectionView.frame.size.width/2
-        
-        let size = CGSize(width: customWidth - 50, height: 200)  //20 260 (100, 180) //(width: customWidth - 100, height: 180)
+        let customHeight = CGFloat(200)
+        let lineSpaceBetweenItems = CGFloat(50)
+        let size = CGSize(width: customWidth - lineSpaceBetweenItems, height: customHeight)
         return size
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let inset = UIEdgeInsetsMake(30, 25, 0, 25)  //(30 12 0 12)
+        let topSpace = 30, leftSpace = 25, rightSpace = 0, buttomSpace = 25
+        let inset = UIEdgeInsetsMake(CGFloat(topSpace), CGFloat(leftSpace), CGFloat(rightSpace), CGFloat(buttomSpace))
         return inset
     }
     

@@ -17,17 +17,25 @@ class ListVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var listTableView: UITableView!
     
     var refreshDelegate : willRefreshDelegate?
-    
     var drinks : [Drink]?
     var refreshedDrinks : [Drink]?
+    let observeDrinksNotificationName = Notification.Name(NotificationKey.reloadFreshDrinks.rawValue)
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         listTableView.delegate = self
         listTableView.delegate = self
         loadData()
+        createObservers()
     }
     
+    func createObservers(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.loadFreshDrinks), name: observeDrinksNotificationName, object: nil)
+    }
 
 
 }
@@ -35,30 +43,25 @@ class ListVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
 //MARK: - INSERT DATA
 extension ListVC {
     
-    func loadFreshDrinks(){
+    @objc func loadFreshDrinks(){
         
+        loadRefreshData()
+        let freshDrinksToAdd = refreshedDrinks![0..<6]
+        var positionCount = 0
+        var newIndices = [IndexPath]()
         
-        //Need to use notification
-        print("Load Fresh start")
-       
-
-        let added = refreshedDrinks![4]
-        self.drinks?.append(added)
-        let count = (self.refreshedDrinks?.count)!
-        let indexx = IndexPath(row: count - 1, section: 0)
-
-
+        for drink in freshDrinksToAdd {
+            drinks?.append(drink)
+            let indexOfNewDrink = IndexPath(row: positionCount - 1 , section: 0)
+            newIndices.append(indexOfNewDrink)
+            positionCount = positionCount + 1
+        }
         
-        listTableView.beginUpdates()
-        listTableView.insertRows(at: [indexx], with: .none)
-        listTableView.endUpdates()
-    
-        print("Load Fresh drink end")
+        listTableView.performBatchUpdates({
+            listTableView.insertRows(at: newIndices, with: .middle)
+        })
     }
-    
 
-    
-    
 }
 
 //MARK: - DELETE ROW
@@ -77,7 +80,6 @@ extension ListVC {
             tableView.endUpdates()
         }
     }
-    
 }
 
 
@@ -126,6 +128,20 @@ extension ListVC {
         }
     }
     
+    
+    func loadRefreshData() {
+        let filePath = Bundle.main.path(forResource: "store217", ofType: "json")
+        let url = URL(fileURLWithPath: filePath!)
+        do {
+            let data = try Data(contentsOf: url)
+            let storeJSONData = try JSONDecoder().decode(DrinksByStore.self, from: data)
+            guard let drinks = storeJSONData.result else { return }
+            self.refreshedDrinks = drinks
+            print("Drinks loaded : \(drinks.count)")
+        }catch let error as NSError {
+            print("Error loading data : \(error)")
+        }
+    }
 }
 
 

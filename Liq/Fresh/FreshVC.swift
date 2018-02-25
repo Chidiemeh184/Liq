@@ -17,22 +17,17 @@ class FreshVC: UIViewController {
     var drinks : [Drink]?
     var refreshedDrinks : [Drink]?
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         freshCollectionView.delegate = self
         freshCollectionView.dataSource = self
+        
+        loadData()
+        
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -74,11 +69,12 @@ extension FreshVC : UICollectionViewDelegateFlowLayout {
 extension FreshVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return (drinks?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.freshCVCell.rawValue, for: indexPath) as! FreshCVCell
+        cell.setUpWithDrink(drink: drinks![indexPath.row])
         return cell
     }
     
