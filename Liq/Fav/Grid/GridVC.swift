@@ -45,16 +45,14 @@ class GridVC: UIViewController {
     func removeItemAt(indexPath : IndexPath){
         drinks?.remove(at: indexPath.row)
         self.gridCollectionView.deleteItems(at: [indexPath])
-        print("Items were deleted")
         self.gridCollectionView.reloadData()
     }
     
 
-    
-    
-    
-    
+
 }//End Class
+
+
 
 //MARK: - Gesture Recognizers
 extension GridVC {
@@ -98,7 +96,6 @@ extension GridVC : UICollectionViewDelegateFlowLayout {
 
 
 
-
 //MARK: - DATASOURCE
 extension GridVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -133,12 +130,9 @@ extension GridVC {
         
         do {
             let data = try Data(contentsOf: url)
-            
             let storeJSONData = try JSONDecoder().decode(DrinksByStore.self, from: data)
             guard let drinks = storeJSONData.result else { return }
-            
             self.drinks = drinks
-            //print("Drinks loaded : \(drinks.count)")
         }catch let error as NSError {
             print("Error loading data : \(error)")
         }
