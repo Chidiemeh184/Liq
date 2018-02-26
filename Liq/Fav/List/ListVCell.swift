@@ -30,28 +30,22 @@ class ListVCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     
     func setUpWithDrink(drink : Drink){
-        
         self.drink = drink
         drinkImageView.downloadImagefromUrl(url: drink.imageUrl)
         nameLabel.text = drink.name!
         alcoholContentLabel.text = "\(drink.alcoholContent!/100)% Vol Alc"
         styleLabel.text = drink.style!
         varietalLabel.text = drink.varietal!
-        
     }
     
     private func setUpViews(){
-
         backView.layer.borderWidth = 0.5
         backView.layer.borderColor = UIColor.lightGray.cgColor
         backView.layer.cornerRadius = 4
-        
-        
     }
 
 }

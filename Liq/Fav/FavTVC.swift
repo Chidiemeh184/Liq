@@ -38,14 +38,9 @@ class FavTVC: UITableViewController {
     
     @IBAction func fetchDrinks(_ sender: UIRefreshControl) {
         refreshControl?.beginRefreshing()
-        
         let notificationPostName = Notification.Name(NotificationKey.reloadFreshDrinks.rawValue)
         NotificationCenter.default.post(name: notificationPostName, object: nil)
-
         refreshControl?.endRefreshing()
-        
-        
-        
     }
     
     

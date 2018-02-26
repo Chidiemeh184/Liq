@@ -26,27 +26,19 @@ class GridVC: UIViewController {
         
         loadData()
         
-        //Long Press Gesture recognizer
         let lpgr = UILongPressGestureRecognizer(target: self, action: #selector(GridVC.handleLongPress))
-      //  lpgr.delegate = self
         lpgr.delaysTouchesBegan = true
         gridCollectionView.addGestureRecognizer(lpgr)
-    
-        
-        
+
     }
     
     @objc func handleLongPress(gesture : UILongPressGestureRecognizer){
-        if gesture.state != .ended {
-            return
-        }
+        if gesture.state != .ended { return }
         let position = gesture.location(in: gridCollectionView)
         if let indexPath = gridCollectionView.indexPathForItem(at: position){
-
             let cell = gridCollectionView.cellForItem(at: indexPath) as! GridCVCell
             cell.cancelButtonImageview.isHidden = false
         }
-
     }
     
     
@@ -79,28 +71,28 @@ extension GridVC : UICollectionViewDelegateFlowLayout {
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10 //50
+        let lineSpacing = CGFloat(10)
+        return lineSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10 //14
+        let interItemSpacing = CGFloat(10)
+        return interItemSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let customWidth = collectionView.frame.size.width/3
-        
-        let size = CGSize(width: customWidth - 10, height: 200)  //20 260 (100, 180) //(width: customWidth - 100, height: 180)
-        
+        let customHeight = CGFloat(200)
+        let lineSpace = CGFloat(10)
+        let size = CGSize(width: customWidth - lineSpace, height: customHeight)
         return size
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let inset = UIEdgeInsetsMake(30, 5, 0, 5)  //(30 12 0 12)
+        let topSpace = CGFloat(30), leftSpace = CGFloat(5), bottomSpace = CGFloat(0), rightSpace = CGFloat(5)
+        let inset = UIEdgeInsetsMake(topSpace, leftSpace, bottomSpace, rightSpace)
         return inset
     }
-    
     
 }
 
@@ -111,7 +103,7 @@ extension GridVC : UICollectionViewDelegateFlowLayout {
 extension GridVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return (drinks?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -126,10 +118,7 @@ extension GridVC : UICollectionViewDelegate, UICollectionViewDataSource {
         print("row : \(indexPath.row)")
         print("section : \(indexPath.section)")
 
-
     }
-    
-    
     
 }
 

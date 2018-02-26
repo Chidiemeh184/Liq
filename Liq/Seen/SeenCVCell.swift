@@ -20,7 +20,6 @@ class SeenCVCell: UICollectionViewCell {
     
     
     func setUpWithDrink(drink : Drink){
-        
         self.drink = drink
         drinkImageView.downloadImagefromUrl(url: drink.imageUrl)
     }

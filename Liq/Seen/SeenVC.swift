@@ -32,8 +32,6 @@ class SeenVC: UIViewController {
 
 
 
-
-
 //MARK: - FLOW LAYOUT
 extension SeenVC : UICollectionViewDelegateFlowLayout {
     

@@ -79,8 +79,6 @@ extension FreshVC : UICollectionViewDelegateFlowLayout {
         let itemSpace = CGFloat(50)
         let size = CGSize(width: customWidth - itemSpace, height: customHeight)
         
-        print("width : \(customWidth), Height : \(customHeight)")
-        
         return size
         
     }
@@ -111,8 +109,6 @@ extension FreshVC : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //Perform Segue
     }
-    
-    
 }
 
 
