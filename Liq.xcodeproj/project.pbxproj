@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF12E534204521A500C87440 /* SaveDrinkTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12E533204521A500C87440 /* SaveDrinkTVCell.swift */; };
+		EF12E53620452E4400C87440 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12E53520452E4400C87440 /* Segue.swift */; };
 		EF1766CA203590ED000693DF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1766C8203590ED000693DF /* Home.storyboard */; };
 		EF1766CC2035DB85000693DF /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1766CB2035DB85000693DF /* Favorites.storyboard */; };
 		EF1766CE2035E163000693DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1766CD2035E163000693DF /* HomeViewController.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF12E533204521A500C87440 /* SaveDrinkTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDrinkTVCell.swift; sourceTree = "<group>"; };
+		EF12E53520452E4400C87440 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		EF1766C9203590ED000693DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Liq/Storyboards/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		EF1766CB2035DB85000693DF /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		EF1766CD2035E163000693DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			children = (
 				EF3BC71220399EE100B1854B /* Cell.swift */,
 				EF588D7F2042E3110057337B /* NotificationKey.swift */,
+				EF12E53520452E4400C87440 /* Segue.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				EF588D9120451AE00057337B /* TastingNoteTVCell.xib */,
 				EF588D9420451DE70057337B /* ServingSuggestionTVCell.swift */,
 				EF588D9520451DE70057337B /* ServingSuggestionTVCell.xib */,
+				EF12E533204521A500C87440 /* SaveDrinkTVCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -412,12 +418,14 @@
 				EFB432DF203CED3E00055618 /* StoresResponse.swift in Sources */,
 				EF61AC8F203AF84E00F2887D /* Extensions.swift in Sources */,
 				EF588D9620451DE70057337B /* ServingSuggestionTVCell.swift in Sources */,
+				EF12E534204521A500C87440 /* SaveDrinkTVCell.swift in Sources */,
 				EF61AC92203B1D2600F2887D /* SeenVC.swift in Sources */,
 				EF588D8920449B530057337B /* DrinkImageTVCell.swift in Sources */,
 				EF1766CE2035E163000693DF /* HomeViewController.swift in Sources */,
 				EF61AC96203B22CA00F2887D /* Inventories.swift in Sources */,
 				EF61AC86203AE93800F2887D /* FreshVC.swift in Sources */,
 				EF3BC71120399E4500B1854B /* HomeTVC.swift in Sources */,
+				EF12E53620452E4400C87440 /* Segue.swift in Sources */,
 				EF61ACA3203B9BF500F2887D /* FavTVC.swift in Sources */,
 				EFB432DD203CEC6F00055618 /* DrinksByStore.swift in Sources */,
 				EF588D852043E39E0057337B /* DetailOpenTVC.swift in Sources */,

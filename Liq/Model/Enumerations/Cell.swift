@@ -28,5 +28,6 @@ enum Cell : String {
     case informationTVCell = "informationTVCell"
     case tastingNoteTVCell = "tastingNoteTVCell"
     case servingSuggestionTVCell = "servingSuggestionTVCell"
+    case saveDrinkTVCell = "saveDrinkTVCell"
     
 }
