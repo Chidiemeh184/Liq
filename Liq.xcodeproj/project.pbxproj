@@ -14,6 +14,16 @@
 		EF3BC71320399EE100B1854B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BC71220399EE100B1854B /* Cell.swift */; };
 		EF3BC71620399F3E00B1854B /* HomeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BC71520399F3E00B1854B /* HomeTVCell.swift */; };
 		EF588D802042E3110057337B /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF588D7F2042E3110057337B /* NotificationKey.swift */; };
+		EF588D822043E2AD0057337B /* HomeFreshSeen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF588D812043E2AD0057337B /* HomeFreshSeen.storyboard */; };
+		EF588D852043E39E0057337B /* DetailOpenTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF588D842043E39E0057337B /* DetailOpenTVC.swift */; };
+		EF588D8920449B530057337B /* DrinkImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF588D8820449B530057337B /* DrinkImageTVCell.swift */; };
+		EF588D8C2044C34A0057337B /* DescriptionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF588D8A2044C34A0057337B /* DescriptionTVCell.swift */; };
+		EF588D8D2044C34A0057337B /* DescriptionTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF588D8B2044C34A0057337B /* DescriptionTVCell.xib */; };
+		EF588D8F2044D0D20057337B /* InformationTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF588D8E2044D0D20057337B /* InformationTVCell.swift */; };
+		EF588D9220451AE00057337B /* TastingNoteTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF588D9020451AE00057337B /* TastingNoteTVCell.swift */; };
+		EF588D9320451AE00057337B /* TastingNoteTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF588D9120451AE00057337B /* TastingNoteTVCell.xib */; };
+		EF588D9620451DE70057337B /* ServingSuggestionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF588D9420451DE70057337B /* ServingSuggestionTVCell.swift */; };
+		EF588D9720451DE70057337B /* ServingSuggestionTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF588D9520451DE70057337B /* ServingSuggestionTVCell.xib */; };
 		EF61AC7D2039B05700F2887D /* HeaderSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61AC7C2039B05700F2887D /* HeaderSegment.swift */; };
 		EF61AC7F2039B06800F2887D /* HeaderSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF61AC7E2039B06800F2887D /* HeaderSegment.xib */; };
 		EF61AC86203AE93800F2887D /* FreshVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61AC85203AE93800F2887D /* FreshVC.swift */; };
@@ -55,6 +65,16 @@
 		EF3BC71220399EE100B1854B /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		EF3BC71520399F3E00B1854B /* HomeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVCell.swift; sourceTree = "<group>"; };
 		EF588D7F2042E3110057337B /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
+		EF588D812043E2AD0057337B /* HomeFreshSeen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeFreshSeen.storyboard; sourceTree = "<group>"; };
+		EF588D842043E39E0057337B /* DetailOpenTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOpenTVC.swift; sourceTree = "<group>"; };
+		EF588D8820449B530057337B /* DrinkImageTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkImageTVCell.swift; sourceTree = "<group>"; };
+		EF588D8A2044C34A0057337B /* DescriptionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTVCell.swift; sourceTree = "<group>"; };
+		EF588D8B2044C34A0057337B /* DescriptionTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTVCell.xib; sourceTree = "<group>"; };
+		EF588D8E2044D0D20057337B /* InformationTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTVCell.swift; sourceTree = "<group>"; };
+		EF588D9020451AE00057337B /* TastingNoteTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNoteTVCell.swift; sourceTree = "<group>"; };
+		EF588D9120451AE00057337B /* TastingNoteTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TastingNoteTVCell.xib; sourceTree = "<group>"; };
+		EF588D9420451DE70057337B /* ServingSuggestionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServingSuggestionTVCell.swift; sourceTree = "<group>"; };
+		EF588D9520451DE70057337B /* ServingSuggestionTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServingSuggestionTVCell.xib; sourceTree = "<group>"; };
 		EF61AC7C2039B05700F2887D /* HeaderSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSegment.swift; sourceTree = "<group>"; };
 		EF61AC7E2039B06800F2887D /* HeaderSegment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSegment.xib; sourceTree = "<group>"; };
 		EF61AC85203AE93800F2887D /* FreshVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshVC.swift; sourceTree = "<group>"; };
@@ -107,6 +127,7 @@
 				EFEFED532033F81B001BD137 /* Main.storyboard */,
 				EF1766C8203590ED000693DF /* Home.storyboard */,
 				EF1766CB2035DB85000693DF /* Favorites.storyboard */,
+				EF588D812043E2AD0057337B /* HomeFreshSeen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -130,6 +151,30 @@
 				EF588D7F2042E3110057337B /* NotificationKey.swift */,
 			);
 			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		EF588D832043E3460057337B /* Detail Open */ = {
+			isa = PBXGroup;
+			children = (
+				EF588D842043E39E0057337B /* DetailOpenTVC.swift */,
+				EF588D8720449B140057337B /* Cells */,
+			);
+			path = "Detail Open";
+			sourceTree = "<group>";
+		};
+		EF588D8720449B140057337B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EF588D8820449B530057337B /* DrinkImageTVCell.swift */,
+				EF588D8A2044C34A0057337B /* DescriptionTVCell.swift */,
+				EF588D8B2044C34A0057337B /* DescriptionTVCell.xib */,
+				EF588D8E2044D0D20057337B /* InformationTVCell.swift */,
+				EF588D9020451AE00057337B /* TastingNoteTVCell.swift */,
+				EF588D9120451AE00057337B /* TastingNoteTVCell.xib */,
+				EF588D9420451DE70057337B /* ServingSuggestionTVCell.swift */,
+				EF588D9520451DE70057337B /* ServingSuggestionTVCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EF61AC802039C86C00F2887D /* Fresh */ = {
@@ -207,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				EF1766C420357B6B000693DF /* Storyboards */,
+				EF588D832043E3460057337B /* Detail Open */,
 				EF1766C520357CE3000693DF /* Home */,
 				EF61AC802039C86C00F2887D /* Fresh */,
 				EF61AC90203B1CDE00F2887D /* Seen */,
@@ -318,15 +364,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF588D9320451AE00057337B /* TastingNoteTVCell.xib in Resources */,
 				EFEFED5D2033F81B001BD137 /* LaunchScreen.storyboard in Resources */,
 				EF61AC8A203AF25B00F2887D /* data.json in Resources */,
 				EFEFED5A2033F81B001BD137 /* Assets.xcassets in Resources */,
 				EFEFED552033F81B001BD137 /* Main.storyboard in Resources */,
+				EF588D9720451DE70057337B /* ServingSuggestionTVCell.xib in Resources */,
 				EF1766CA203590ED000693DF /* Home.storyboard in Resources */,
 				EF61AC7F2039B06800F2887D /* HeaderSegment.xib in Resources */,
 				EF61ACA1203B9A0800F2887D /* store217.json in Resources */,
+				EF588D8D2044C34A0057337B /* DescriptionTVCell.xib in Resources */,
 				EFB432E1203F949800055618 /* store38.json in Resources */,
 				EF1766CC2035DB85000693DF /* Favorites.storyboard in Resources */,
+				EF588D822043E2AD0057337B /* HomeFreshSeen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,16 +387,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF588D8C2044C34A0057337B /* DescriptionTVCell.swift in Sources */,
 				EFEFED6E2034099E001BD137 /* DrinksResponse.swift in Sources */,
 				EFEFED6C2034096C001BD137 /* DrinksFetchService.swift in Sources */,
 				EF3BC71620399F3E00B1854B /* HomeTVCell.swift in Sources */,
 				EFEFED522033F81B001BD137 /* ViewController.swift in Sources */,
 				EFEFED672033F9F6001BD137 /* Drink.swift in Sources */,
+				EF588D9220451AE00057337B /* TastingNoteTVCell.swift in Sources */,
 				EFD40439203C10B500202639 /* GridCVCell.swift in Sources */,
 				EF61AC94203B1D7100F2887D /* SeenCVCell.swift in Sources */,
 				EFD4043B203C798600202639 /* Store.swift in Sources */,
 				EFD40437203C108A00202639 /* GridVC.swift in Sources */,
 				EF588D802042E3110057337B /* NotificationKey.swift in Sources */,
+				EF588D8F2044D0D20057337B /* InformationTVCell.swift in Sources */,
 				EF61AC9A203B26E800F2887D /* Result.swift in Sources */,
 				EF61AC88203AE99D00F2887D /* FreshCVCell.swift in Sources */,
 				EFCF25FB203BFCF700AE58D6 /* ListVCell.swift in Sources */,
@@ -358,13 +411,16 @@
 				EF3BC71320399EE100B1854B /* Cell.swift in Sources */,
 				EFB432DF203CED3E00055618 /* StoresResponse.swift in Sources */,
 				EF61AC8F203AF84E00F2887D /* Extensions.swift in Sources */,
+				EF588D9620451DE70057337B /* ServingSuggestionTVCell.swift in Sources */,
 				EF61AC92203B1D2600F2887D /* SeenVC.swift in Sources */,
+				EF588D8920449B530057337B /* DrinkImageTVCell.swift in Sources */,
 				EF1766CE2035E163000693DF /* HomeViewController.swift in Sources */,
 				EF61AC96203B22CA00F2887D /* Inventories.swift in Sources */,
 				EF61AC86203AE93800F2887D /* FreshVC.swift in Sources */,
 				EF3BC71120399E4500B1854B /* HomeTVC.swift in Sources */,
 				EF61ACA3203B9BF500F2887D /* FavTVC.swift in Sources */,
 				EFB432DD203CEC6F00055618 /* DrinksByStore.swift in Sources */,
+				EF588D852043E39E0057337B /* DetailOpenTVC.swift in Sources */,
 				EFEFED6A2034094D001BD137 /* NetworkProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

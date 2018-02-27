@@ -81,17 +81,18 @@ extension ListVC {
 extension ListVC  {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 151
+        let customHeight = CGFloat(151)
+        return customHeight
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        let sectionNumber = 1
+        return sectionNumber
     }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (drinks?.count)! 
     }
-    
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.listVCell.rawValue, for: indexPath) as! ListVCell
@@ -131,7 +132,6 @@ extension ListVC {
             let storeJSONData = try JSONDecoder().decode(DrinksByStore.self, from: data)
             guard let drinks = storeJSONData.result else { return }
             self.refreshedDrinks = drinks
-            print("Drinks loaded : \(drinks.count)")
         }catch let error as NSError {
             print("Error loading data : \(error)")
         }

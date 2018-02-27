@@ -111,9 +111,9 @@ extension GridVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print("indexPath : \(indexPath)")
-        print("row : \(indexPath.row)")
-        print("section : \(indexPath.section)")
+//        print("indexPath : \(indexPath)")
+//        print("row : \(indexPath.row)")
+//        print("section : \(indexPath.section)")
 
     }
     

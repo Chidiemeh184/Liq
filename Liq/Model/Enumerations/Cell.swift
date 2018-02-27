@@ -21,4 +21,12 @@ enum Cell : String {
     case seenCVCell = "seenCVCell"
     case gridCVCell = "gridCVCell"
     
+    
+    //Detail Open
+    case drinkImageTVCell = "drinkImageTVCell"
+    case descriptionTVCell = "descriptionTVCell"
+    case informationTVCell = "informationTVCell"
+    case tastingNoteTVCell = "tastingNoteTVCell"
+    case servingSuggestionTVCell = "servingSuggestionTVCell"
+    
 }
