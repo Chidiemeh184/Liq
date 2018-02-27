@@ -25,28 +25,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="380" height="164.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsT-7T-yBK">
-                        <rect key="frame" x="32" y="11" width="316" height="28.5"/>
-                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
-                        <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgo-LO-c1h">
-                        <rect key="frame" x="32" y="49.5" width="316" height="96"/>
-                        <string key="text">Gold medal winner at the 2015 Ontario Brewing Awards. In the glass, a hazy copper colour, with a generous lacy head. A rich malty nose is punctuated by forward hops character, contributing citrus and herbal notes. </string>
-                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="239" verticalCompressionResistancePriority="751" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cPF-42-pJ4">
+                        <rect key="frame" x="32" y="11" width="316" height="143.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsT-7T-yBK">
+                                <rect key="frame" x="0.0" y="0.0" width="316" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgo-LO-c1h">
+                                <rect key="frame" x="0.0" y="29.5" width="316" height="114"/>
+                                <string key="text">Gold medal winner at the 2015 Ontario Brewing Awards. In the glass, a hazy copper colour, with a generous lacy head. A rich malty nose is punctuated by forward hops character, contributing citrus and herbal notes. </string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="qgo-LO-c1h" firstAttribute="top" secondItem="FsT-7T-yBK" secondAttribute="bottom" constant="10" id="7Ci-nq-qae"/>
-                    <constraint firstAttribute="trailing" secondItem="FsT-7T-yBK" secondAttribute="trailing" constant="32" id="8K0-Fl-tby"/>
-                    <constraint firstItem="qgo-LO-c1h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="Dir-Xe-5p1"/>
-                    <constraint firstItem="FsT-7T-yBK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="Jse-BI-MnK"/>
-                    <constraint firstItem="FsT-7T-yBK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="Uct-Io-PeO"/>
-                    <constraint firstAttribute="trailing" secondItem="qgo-LO-c1h" secondAttribute="trailing" constant="32" id="Vse-2U-RRe"/>
-                    <constraint firstAttribute="bottom" secondItem="qgo-LO-c1h" secondAttribute="bottom" constant="19" id="WEp-1h-EcN"/>
+                    <constraint firstItem="cPF-42-pJ4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="OeW-TU-GUd"/>
+                    <constraint firstAttribute="trailing" secondItem="cPF-42-pJ4" secondAttribute="trailing" constant="32" id="fij-ca-WFi"/>
+                    <constraint firstAttribute="bottom" secondItem="cPF-42-pJ4" secondAttribute="bottom" constant="10" id="vEt-rp-fAT"/>
+                    <constraint firstItem="cPF-42-pJ4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="vwR-Cq-YV3"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

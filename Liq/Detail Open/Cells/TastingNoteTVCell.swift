@@ -10,15 +10,16 @@ import UIKit
 
 class TastingNoteTVCell: UITableViewCell {
 
+    
+    @IBOutlet weak var tastingNoteLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func setUp(note : String){
+        tastingNoteLabel.text = note
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
 }

@@ -10,15 +10,23 @@ import UIKit
 
 class SaveDrinkTVCell: UITableViewCell {
 
+    
+    @IBOutlet weak var saveDrinkButton: UIButton!
+    
+    var drink : Drink?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+      saveDrinkButton.layer.cornerRadius = saveDrinkButton.layer.frame.height/2
+        
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBAction func saveDrinkButtonTapped(_ sender: UIButton) {
+        print("Drink Saved...")
+    }
+    
+    func setUp(drink : Drink){
+        self.drink = drink
     }
 
 }

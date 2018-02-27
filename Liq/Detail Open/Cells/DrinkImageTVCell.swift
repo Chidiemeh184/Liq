@@ -10,15 +10,29 @@ import UIKit
 
 class DrinkImageTVCell: UITableViewCell {
 
+    @IBOutlet weak var drinkImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var varietalLabel: UILabel!
+    @IBOutlet weak var pricePerLiterLabel: UILabel!
+    @IBOutlet weak var volumeInMillilitersLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+    
+    
+    func setUp(drink : Drink){
+        drinkImageView.downloadImagefromUrl(url: drink.imageUrl )
+        nameLabel.text = drink.name
+        varietalLabel.text = drink.varietal
+        pricePerLiterLabel.text = "$\(drink.pricePerLiterInCents!/100)"
+        volumeInMillilitersLabel.text = "\(drink.volumeInMilliliters!) ml"
+        
+    }
+    
 
 }
