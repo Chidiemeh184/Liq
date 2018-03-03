@@ -36,7 +36,7 @@
         <scene sceneID="DuN-3a-qml">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeScene" id="PBB-n6-mXH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xih-7C-QiO"/>
+                    <tabBarItem key="tabBarItem" title="" image="beerHome" id="xih-7C-QiO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ckp-BV-hte" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,11 +46,15 @@
         <scene sceneID="6d4-KP-E7A">
             <objects>
                 <viewControllerPlaceholder storyboardName="Favorites" referencedIdentifier="FavoriteScene" id="WKr-g1-9S1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="N75-Sd-b8d"/>
+                    <tabBarItem key="tabBarItem" title="" image="beerHeart" id="N75-Sd-b8d"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hsd-lK-SXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="176" y="473"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="beerHeart" width="20" height="20"/>
+        <image name="beerHome" width="20" height="22"/>
+    </resources>
 </document>

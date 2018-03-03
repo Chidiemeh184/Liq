@@ -17,13 +17,11 @@ class HomeTVC: UITableViewController {
     @IBOutlet weak var freshContainerView: UIView!
     @IBOutlet weak var seenContainerView: UIView!
     
-    @IBOutlet weak var switchViewSegmentedControl: UISegmentedControl!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        freshContainerView.isHidden = false
-        seenContainerView.isHidden = true
+        //freshContainerView.isHidden = false
+       // seenContainerView.isHidden = true
     
         
     }
@@ -31,7 +29,7 @@ class HomeTVC: UITableViewController {
     
     @IBAction func segmentControlSwitched(_ sender: UISegmentedControl) {
         
-        switch switchViewSegmentedControl.selectedSegmentIndex {
+        switch drinkTypeSegmentedControl.selectedSegmentIndex {
         case 0:
             freshContainerView.isHidden = false
             seenContainerView.isHidden = true
@@ -66,13 +64,16 @@ extension HomeTVC {
         return 0
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 574
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: Cell.homeTVCell.rawValue, for: indexPath) as! HomeTVCell
-
          return cell
      }
 }
