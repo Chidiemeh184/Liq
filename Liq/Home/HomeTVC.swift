@@ -20,8 +20,8 @@ class HomeTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //freshContainerView.isHidden = false
-       // seenContainerView.isHidden = true
+        freshContainerView.isHidden = false
+        seenContainerView.isHidden = true
     
         
     }

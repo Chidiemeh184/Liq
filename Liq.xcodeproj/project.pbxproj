@@ -11,7 +11,6 @@
 		EF12E53620452E4400C87440 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12E53520452E4400C87440 /* Segue.swift */; };
 		EF1766CA203590ED000693DF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1766C8203590ED000693DF /* Home.storyboard */; };
 		EF1766CC2035DB85000693DF /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1766CB2035DB85000693DF /* Favorites.storyboard */; };
-		EF1766CE2035E163000693DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1766CD2035E163000693DF /* HomeViewController.swift */; };
 		EF3BC71120399E4500B1854B /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BC71020399E4500B1854B /* HomeTVC.swift */; };
 		EF3BC71320399EE100B1854B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BC71220399EE100B1854B /* Cell.swift */; };
 		EF3BC71620399F3E00B1854B /* HomeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BC71520399F3E00B1854B /* HomeTVCell.swift */; };
@@ -26,8 +25,6 @@
 		EF588D9320451AE00057337B /* TastingNoteTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF588D9120451AE00057337B /* TastingNoteTVCell.xib */; };
 		EF588D9620451DE70057337B /* ServingSuggestionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF588D9420451DE70057337B /* ServingSuggestionTVCell.swift */; };
 		EF588D9720451DE70057337B /* ServingSuggestionTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF588D9520451DE70057337B /* ServingSuggestionTVCell.xib */; };
-		EF61AC7D2039B05700F2887D /* HeaderSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61AC7C2039B05700F2887D /* HeaderSegment.swift */; };
-		EF61AC7F2039B06800F2887D /* HeaderSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF61AC7E2039B06800F2887D /* HeaderSegment.xib */; };
 		EF61AC86203AE93800F2887D /* FreshVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61AC85203AE93800F2887D /* FreshVC.swift */; };
 		EF61AC88203AE99D00F2887D /* FreshCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61AC87203AE99D00F2887D /* FreshCVCell.swift */; };
 		EF61AC8A203AF25B00F2887D /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = EF61AC89203AF25B00F2887D /* data.json */; };
@@ -64,7 +61,6 @@
 		EF12E53520452E4400C87440 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		EF1766C9203590ED000693DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Liq/Storyboards/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		EF1766CB2035DB85000693DF /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
-		EF1766CD2035E163000693DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EF3BC71020399E4500B1854B /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
 		EF3BC71220399EE100B1854B /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		EF3BC71520399F3E00B1854B /* HomeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVCell.swift; sourceTree = "<group>"; };
@@ -79,8 +75,6 @@
 		EF588D9120451AE00057337B /* TastingNoteTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TastingNoteTVCell.xib; sourceTree = "<group>"; };
 		EF588D9420451DE70057337B /* ServingSuggestionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServingSuggestionTVCell.swift; sourceTree = "<group>"; };
 		EF588D9520451DE70057337B /* ServingSuggestionTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServingSuggestionTVCell.xib; sourceTree = "<group>"; };
-		EF61AC7C2039B05700F2887D /* HeaderSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSegment.swift; sourceTree = "<group>"; };
-		EF61AC7E2039B06800F2887D /* HeaderSegment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSegment.xib; sourceTree = "<group>"; };
 		EF61AC85203AE93800F2887D /* FreshVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshVC.swift; sourceTree = "<group>"; };
 		EF61AC87203AE99D00F2887D /* FreshCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshCVCell.swift; sourceTree = "<group>"; };
 		EF61AC89203AF25B00F2887D /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -139,11 +133,8 @@
 		EF1766C520357CE3000693DF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				EF1766CD2035E163000693DF /* HomeViewController.swift */,
 				EF3BC71520399F3E00B1854B /* HomeTVCell.swift */,
 				EF3BC71020399E4500B1854B /* HomeTVC.swift */,
-				EF61AC7C2039B05700F2887D /* HeaderSegment.swift */,
-				EF61AC7E2039B06800F2887D /* HeaderSegment.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -377,7 +368,6 @@
 				EFEFED552033F81B001BD137 /* Main.storyboard in Resources */,
 				EF588D9720451DE70057337B /* ServingSuggestionTVCell.xib in Resources */,
 				EF1766CA203590ED000693DF /* Home.storyboard in Resources */,
-				EF61AC7F2039B06800F2887D /* HeaderSegment.xib in Resources */,
 				EF61ACA1203B9A0800F2887D /* store217.json in Resources */,
 				EF588D8D2044C34A0057337B /* DescriptionTVCell.xib in Resources */,
 				EFB432E1203F949800055618 /* store38.json in Resources */,
@@ -412,7 +402,6 @@
 				EF61AC8D203AF48700F2887D /* ShadowView.swift in Sources */,
 				EF61AC98203B239500F2887D /* Pager.swift in Sources */,
 				EFEFED502033F81B001BD137 /* AppDelegate.swift in Sources */,
-				EF61AC7D2039B05700F2887D /* HeaderSegment.swift in Sources */,
 				EFCF25F9203BFCCC00AE58D6 /* ListVC.swift in Sources */,
 				EF3BC71320399EE100B1854B /* Cell.swift in Sources */,
 				EFB432DF203CED3E00055618 /* StoresResponse.swift in Sources */,
@@ -421,7 +410,6 @@
 				EF12E534204521A500C87440 /* SaveDrinkTVCell.swift in Sources */,
 				EF61AC92203B1D2600F2887D /* SeenVC.swift in Sources */,
 				EF588D8920449B530057337B /* DrinkImageTVCell.swift in Sources */,
-				EF1766CE2035E163000693DF /* HomeViewController.swift in Sources */,
 				EF61AC96203B22CA00F2887D /* Inventories.swift in Sources */,
 				EF61AC86203AE93800F2887D /* FreshVC.swift in Sources */,
 				EF3BC71120399E4500B1854B /* HomeTVC.swift in Sources */,

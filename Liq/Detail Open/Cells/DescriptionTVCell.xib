@@ -25,22 +25,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="380" height="164.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgo-LO-c1h">
-                        <rect key="frame" x="32" y="41" width="296" height="114"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <string key="text">Gold medal winner at the 2015 Ontario Brewing Awards. In the glass, a hazy copper colour, with a generous lacy head. A rich malty nose is punctuated by forward hops character, contributing citrus and herbal notes. </string>
-                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" fixedFrame="YES" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsT-7T-yBK">
-                        <rect key="frame" x="102" y="11" width="93" height="19.5"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
-                        <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fVv-aE-M2L">
+                        <rect key="frame" x="32" y="11" width="316" height="142.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsT-7T-yBK">
+                                <rect key="frame" x="0.0" y="0.0" width="316" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgo-LO-c1h">
+                                <rect key="frame" x="0.0" y="29.5" width="316" height="113"/>
+                                <string key="text">Gold medal winner at the 2015 Ontario Brewing Awards. In the glass, a hazy copper colour, with a generous lacy head. A rich malty nose is punctuated by forward hops character, contributing citrus and herbal notes. </string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="fVv-aE-M2L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="A9b-nf-hK7"/>
+                    <constraint firstAttribute="trailing" secondItem="fVv-aE-M2L" secondAttribute="trailing" constant="32" id="bbi-zL-Vmd"/>
+                    <constraint firstAttribute="bottom" secondItem="fVv-aE-M2L" secondAttribute="bottom" priority="999" constant="11" id="k33-uP-2gw"/>
+                    <constraint firstItem="fVv-aE-M2L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" priority="999" constant="11" id="oGm-Bt-DDN"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <point key="canvasLocation" x="64" y="114.5"/>

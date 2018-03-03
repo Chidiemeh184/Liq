@@ -25,8 +25,9 @@ class FreshVC: UIViewController {
         super.viewDidLoad()
         freshCollectionView.delegate = self
         freshCollectionView.dataSource = self
-        loadData()
         createObservers()
+        loadData()
+
     }
     
     func createObservers(){
