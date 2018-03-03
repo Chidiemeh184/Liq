@@ -79,9 +79,27 @@ extension SeenVC : UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //Perform Segue
+        performSegue(withIdentifier: Segue.freshToDetailOpen.rawValue, sender: indexPath)
     }
     
+    
+}
+
+
+//MARK: Segue
+
+extension SeenVC {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.freshToDetailOpen.rawValue {
+            
+            let detailOpenTVC = segue.destination as! DetailOpenTVC
+            guard let indexPath = sender as? NSIndexPath else { return }
+            let seenCVCell = seenCollectionView.cellForItem(at: indexPath as IndexPath) as? SeenCVCell
+            detailOpenTVC.drink = seenCVCell?.drink
+            
+        }
+    }
     
 }
 

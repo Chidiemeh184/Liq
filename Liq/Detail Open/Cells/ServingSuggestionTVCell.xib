@@ -25,7 +25,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="380" height="185.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vOI-gO-xfX">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W2X-R4-bxA">
                         <rect key="frame" x="32" y="10" width="316" height="165.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="SERVING SUGGESTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eB-oy-rt2">
@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIw-QE-XeM">
-                                <rect key="frame" x="0.0" y="19.5" width="316" height="146"/>
+                                <rect key="frame" x="0.0" y="29.5" width="316" height="136"/>
                                 <string key="text">Gold medal winner at the 2015 Ontario Brewing Awards. In the glass, a hazy copper colour, with a generous lacy head. A rich malty nose is punctuated by forward hops character, contributing citrus and herbal notes. </string>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,10 +45,10 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="vOI-gO-xfX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="Bb7-Ff-hTX"/>
-                    <constraint firstAttribute="trailing" secondItem="vOI-gO-xfX" secondAttribute="trailing" constant="32" id="FOt-oH-ROB"/>
-                    <constraint firstAttribute="bottom" secondItem="vOI-gO-xfX" secondAttribute="bottom" constant="10" id="aUa-lr-1Ud"/>
-                    <constraint firstItem="vOI-gO-xfX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="fSf-XD-4Mb"/>
+                    <constraint firstAttribute="trailing" secondItem="W2X-R4-bxA" secondAttribute="trailing" constant="32" id="K7S-Hz-T9G"/>
+                    <constraint firstItem="W2X-R4-bxA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="YwE-hW-m3s"/>
+                    <constraint firstItem="W2X-R4-bxA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="cVG-fp-XCN"/>
+                    <constraint firstAttribute="bottom" secondItem="W2X-R4-bxA" secondAttribute="bottom" constant="10" id="ew0-1i-vN6"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
