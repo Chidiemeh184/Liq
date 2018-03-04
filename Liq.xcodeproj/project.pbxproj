@@ -11,6 +11,9 @@
 		EF12E53620452E4400C87440 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12E53520452E4400C87440 /* Segue.swift */; };
 		EF1766CA203590ED000693DF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1766C8203590ED000693DF /* Home.storyboard */; };
 		EF1766CC2035DB85000693DF /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1766CB2035DB85000693DF /* Favorites.storyboard */; };
+		EF362DD8204BE49400501047 /* FiltersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF362DD7204BE49400501047 /* FiltersVC.swift */; };
+		EF362DDA204C2C8300501047 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF362DD9204C2C8300501047 /* ToggleButton.swift */; };
+		EF362DDC204C2CD100501047 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF362DDB204C2CD100501047 /* Constants.swift */; };
 		EF3BC71120399E4500B1854B /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BC71020399E4500B1854B /* HomeTVC.swift */; };
 		EF3BC71320399EE100B1854B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BC71220399EE100B1854B /* Cell.swift */; };
 		EF3BC71620399F3E00B1854B /* HomeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BC71520399F3E00B1854B /* HomeTVCell.swift */; };
@@ -61,6 +64,9 @@
 		EF12E53520452E4400C87440 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		EF1766C9203590ED000693DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Liq/Storyboards/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		EF1766CB2035DB85000693DF /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		EF362DD7204BE49400501047 /* FiltersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersVC.swift; sourceTree = "<group>"; };
+		EF362DD9204C2C8300501047 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		EF362DDB204C2CD100501047 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF3BC71020399E4500B1854B /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
 		EF3BC71220399EE100B1854B /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		EF3BC71520399F3E00B1854B /* HomeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVCell.swift; sourceTree = "<group>"; };
@@ -142,6 +148,7 @@
 		EF362DD0204AE91400501047 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
+				EF362DD7204BE49400501047 /* FiltersVC.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -195,6 +202,8 @@
 			children = (
 				EF61AC8C203AF48700F2887D /* ShadowView.swift */,
 				EF61AC8E203AF84E00F2887D /* Extensions.swift */,
+				EF362DD9204C2C8300501047 /* ToggleButton.swift */,
+				EF362DDB204C2CD100501047 /* Constants.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -391,6 +400,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF362DD8204BE49400501047 /* FiltersVC.swift in Sources */,
+				EF362DDC204C2CD100501047 /* Constants.swift in Sources */,
 				EF588D8C2044C34A0057337B /* DescriptionTVCell.swift in Sources */,
 				EFEFED6E2034099E001BD137 /* DrinksResponse.swift in Sources */,
 				EFEFED6C2034096C001BD137 /* DrinksFetchService.swift in Sources */,
@@ -398,6 +409,7 @@
 				EFEFED522033F81B001BD137 /* ViewController.swift in Sources */,
 				EFEFED672033F9F6001BD137 /* Drink.swift in Sources */,
 				EF588D9220451AE00057337B /* TastingNoteTVCell.swift in Sources */,
+				EF362DDA204C2C8300501047 /* ToggleButton.swift in Sources */,
 				EFD40439203C10B500202639 /* GridCVCell.swift in Sources */,
 				EF61AC94203B1D7100F2887D /* SeenCVCell.swift in Sources */,
 				EFD4043B203C798600202639 /* Store.swift in Sources */,
