@@ -122,6 +122,9 @@
                         <rightBarButtonItems>
                             <barButtonItem image="beerSetting" id="u2q-yk-rsp">
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="Ewl-Xv-KYG" kind="presentation" id="jvW-fk-CDy"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="refresh" id="MF5-6A-Kon">
                                 <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -238,7 +241,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCL-7N-a7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="1925"/>
+            <point key="canvasLocation" x="1465" y="794"/>
+        </scene>
+        <!--Filters-->
+        <scene sceneID="mGH-Ke-uep">
+            <objects>
+                <viewController id="3tK-kP-Mym" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xaK-VT-mDv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u81-d6-7LM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zg8-Qv-nqW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jre-rs-AeT">
+                                                <rect key="frame" x="123" y="897" width="128" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="qR2-tm-MWm"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Jre-rs-AeT" firstAttribute="leading" secondItem="zg8-Qv-nqW" secondAttribute="leading" constant="123" id="ASy-iP-tgG"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jre-rs-AeT" secondAttribute="trailing" constant="124" id="W0n-Rx-ahy"/>
+                                            <constraint firstAttribute="height" constant="1000" id="bRM-qS-Iq8"/>
+                                            <constraint firstAttribute="bottom" secondItem="Jre-rs-AeT" secondAttribute="bottom" constant="73" id="w0e-Pr-Qte"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="zg8-Qv-nqW" secondAttribute="bottom" id="IrB-Sr-dij"/>
+                                    <constraint firstAttribute="trailing" secondItem="zg8-Qv-nqW" secondAttribute="trailing" id="PJV-lH-Weg"/>
+                                    <constraint firstItem="zg8-Qv-nqW" firstAttribute="leading" secondItem="u81-d6-7LM" secondAttribute="leading" id="VNr-e5-2zU"/>
+                                    <constraint firstItem="zg8-Qv-nqW" firstAttribute="top" secondItem="u81-d6-7LM" secondAttribute="top" id="wf5-ac-c9L"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u81-d6-7LM" firstAttribute="bottom" secondItem="18w-yd-srd" secondAttribute="bottom" id="NGc-Yp-V7o"/>
+                            <constraint firstItem="u81-d6-7LM" firstAttribute="top" secondItem="xaK-VT-mDv" secondAttribute="top" id="Qm4-in-pup"/>
+                            <constraint firstItem="zg8-Qv-nqW" firstAttribute="width" secondItem="xaK-VT-mDv" secondAttribute="width" id="jNK-cO-v9E"/>
+                            <constraint firstItem="u81-d6-7LM" firstAttribute="trailing" secondItem="18w-yd-srd" secondAttribute="trailing" id="yBJ-Vi-Wdb"/>
+                            <constraint firstItem="u81-d6-7LM" firstAttribute="leading" secondItem="18w-yd-srd" secondAttribute="leading" id="zBd-hi-Vnw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="18w-yd-srd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filters" id="cTJ-eg-h6O">
+                        <barButtonItem key="leftBarButtonItem" image="Cross" id="0Ye-xI-tR3">
+                            <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <size key="freeformSize" width="375" height="1100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ugd-ki-M3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709.60000000000002" y="2056.3718140929536"/>
         </scene>
         <!--GridVC-->
         <scene sceneID="dbd-gi-5L1">
@@ -335,10 +399,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5C-jX-sJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="1925"/>
+            <point key="canvasLocation" x="1804" y="1482.4587706146929"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="22w-q7-7E3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ewl-Xv-KYG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fLd-MA-2A9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3tK-kP-Mym" kind="relationship" relationship="rootViewController" id="5z9-jp-8rT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHl-31-oY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="1907"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Cross" width="16" height="16"/>
         <image name="beerGrid" width="20" height="20"/>
         <image name="beerHeart" width="20" height="20"/>
         <image name="beerList" width="20" height="22"/>

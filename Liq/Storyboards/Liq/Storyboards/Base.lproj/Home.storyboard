@@ -82,7 +82,11 @@
                             <outlet property="delegate" destination="eBt-70-LYQ" id="Yt2-K8-MZX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="TsV-fD-wvv"/>
+                    <navigationItem key="navigationItem" title="Home" id="TsV-fD-wvv">
+                        <barButtonItem key="rightBarButtonItem" image="beerSetting" id="CrB-UR-m33">
+                            <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="drinkTypeSegmentedControl" destination="Oxq-Tb-dwm" id="j90-pa-do4"/>
                         <outlet property="freshContainerView" destination="UTK-8m-rpg" id="log-Qf-8LO"/>
@@ -628,6 +632,7 @@
         <image name="Previous" width="20" height="20"/>
         <image name="beerHeart" width="20" height="20"/>
         <image name="beerHome" width="20" height="22"/>
+        <image name="beerSetting" width="20" height="20"/>
         <image name="budLight" width="960" height="1280"/>
         <image name="molson" width="960" height="1280"/>
     </resources>

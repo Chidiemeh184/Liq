@@ -139,6 +139,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		EF362DD0204AE91400501047 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 		EF3BC71420399F1000B1854B /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				EF1766C420357B6B000693DF /* Storyboards */,
+				EF362DD0204AE91400501047 /* Filters */,
 				EF588D832043E3460057337B /* Detail Open */,
 				EF1766C520357CE3000693DF /* Home */,
 				EF61AC802039C86C00F2887D /* Fresh */,
