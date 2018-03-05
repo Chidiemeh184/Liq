@@ -25,13 +25,14 @@ class ToggleButton: UIButton {
     func initButton() {
         layer.borderWidth = 2.0
         layer.borderColor = Colors.LiqBlack.cgColor
-        layer.cornerRadius = frame.size.height/2
+        //layer.cornerRadius = frame.size.height/2
         
-        setTitleColor(Colors.twitterBlue, for: .normal)
-        addTarget(self, action: #selector(SAFollowButton.buttonPressed), for: .touchUpInside)
+        setTitleColor(Colors.LiqBlack, for: .normal)
+        addTarget(self, action: #selector(ToggleButton.buttonPressed), for: .touchUpInside)
     }
     
-    func buttonPressed() {
+    
+    @objc func buttonPressed() {
         activateButton(bool: !isOn)
     }
     
@@ -40,10 +41,8 @@ class ToggleButton: UIButton {
         isOn = bool
         
         let color = bool ? Colors.LiqBlack : .clear
-        //let title = bool ? "Following" : "Follow"
         let titleColor = bool ? .white : Colors.LiqBlack
-        
-        setTitle(title, for: .normal)
+        setTitle(self.titleLabel?.text, for: .normal)
         setTitleColor(titleColor, for: .normal)
         backgroundColor = color
     }
