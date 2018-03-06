@@ -44,10 +44,10 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="Oxq-Tb-dwm" secondAttribute="trailing" constant="16" id="8Ky-0Z-9Yc"/>
-                                <constraint firstItem="Oxq-Tb-dwm" firstAttribute="top" secondItem="lK8-EM-Lah" secondAttribute="top" constant="7" id="T51-57-4C2"/>
-                                <constraint firstItem="Oxq-Tb-dwm" firstAttribute="leading" secondItem="lK8-EM-Lah" secondAttribute="leading" constant="16" id="UqD-V6-dps"/>
-                                <constraint firstAttribute="bottom" secondItem="Oxq-Tb-dwm" secondAttribute="bottom" constant="7" id="jEd-Hc-H1h"/>
+                                <constraint firstItem="Oxq-Tb-dwm" firstAttribute="top" secondItem="lK8-EM-Lah" secondAttribute="top" constant="7" id="1D3-D8-ZJX"/>
+                                <constraint firstAttribute="bottom" secondItem="Oxq-Tb-dwm" secondAttribute="bottom" constant="7" id="CLP-OV-t8o"/>
+                                <constraint firstItem="Oxq-Tb-dwm" firstAttribute="leading" secondItem="lK8-EM-Lah" secondAttribute="leading" constant="16" id="pPx-cY-0Mv"/>
+                                <constraint firstAttribute="trailing" secondItem="Oxq-Tb-dwm" secondAttribute="trailing" constant="16" id="sWs-RF-l6G"/>
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="9wS-dk-X3f">
