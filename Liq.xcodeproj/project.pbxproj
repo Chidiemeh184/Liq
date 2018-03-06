@@ -11,6 +11,9 @@
 		EF12E53620452E4400C87440 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12E53520452E4400C87440 /* Segue.swift */; };
 		EF1766CA203590ED000693DF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1766C8203590ED000693DF /* Home.storyboard */; };
 		EF1766CC2035DB85000693DF /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1766CB2035DB85000693DF /* Favorites.storyboard */; };
+		EF1B6157204E1F0D00CCDE55 /* FilterKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1B6156204E1F0D00CCDE55 /* FilterKeys.swift */; };
+		EF1B615C204E450800CCDE55 /* Liq_Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF1B615A204E450800CCDE55 /* Liq_Store.xcdatamodeld */; };
+		EF1B615E204E452C00CCDE55 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1B615D204E452C00CCDE55 /* CoreDataStack.swift */; };
 		EF362DD8204BE49400501047 /* FiltersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF362DD7204BE49400501047 /* FiltersVC.swift */; };
 		EF362DDA204C2C8300501047 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF362DD9204C2C8300501047 /* ToggleButton.swift */; };
 		EF362DDC204C2CD100501047 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF362DDB204C2CD100501047 /* Constants.swift */; };
@@ -64,6 +67,9 @@
 		EF12E53520452E4400C87440 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		EF1766C9203590ED000693DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Liq/Storyboards/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		EF1766CB2035DB85000693DF /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		EF1B6156204E1F0D00CCDE55 /* FilterKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterKeys.swift; sourceTree = "<group>"; };
+		EF1B615B204E450800CCDE55 /* Liq_Store.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Liq_Store.xcdatamodel; sourceTree = "<group>"; };
+		EF1B615D204E452C00CCDE55 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		EF362DD7204BE49400501047 /* FiltersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersVC.swift; sourceTree = "<group>"; };
 		EF362DD9204C2C8300501047 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		EF362DDB204C2CD100501047 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -159,6 +165,7 @@
 				EF3BC71220399EE100B1854B /* Cell.swift */,
 				EF588D7F2042E3110057337B /* NotificationKey.swift */,
 				EF12E53520452E4400C87440 /* Segue.swift */,
+				EF1B6156204E1F0D00CCDE55 /* FilterKeys.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -289,6 +296,8 @@
 				EF61AC89203AF25B00F2887D /* data.json */,
 				EF61ACA0203B9A0800F2887D /* store217.json */,
 				EFB432E0203F949800055618 /* store38.json */,
+				EF1B615A204E450800CCDE55 /* Liq_Store.xcdatamodeld */,
+				EF1B615D204E452C00CCDE55 /* CoreDataStack.swift */,
 				EF3BC71420399F1000B1854B /* Enumerations */,
 				EFEFED652033F951001BD137 /* API */,
 			);
@@ -416,6 +425,7 @@
 				EFD40437203C108A00202639 /* GridVC.swift in Sources */,
 				EF588D802042E3110057337B /* NotificationKey.swift in Sources */,
 				EF588D8F2044D0D20057337B /* InformationTVCell.swift in Sources */,
+				EF1B615E204E452C00CCDE55 /* CoreDataStack.swift in Sources */,
 				EF61AC9A203B26E800F2887D /* Result.swift in Sources */,
 				EF61AC88203AE99D00F2887D /* FreshCVCell.swift in Sources */,
 				EFCF25FB203BFCF700AE58D6 /* ListVCell.swift in Sources */,
@@ -424,9 +434,11 @@
 				EFEFED502033F81B001BD137 /* AppDelegate.swift in Sources */,
 				EFCF25F9203BFCCC00AE58D6 /* ListVC.swift in Sources */,
 				EF3BC71320399EE100B1854B /* Cell.swift in Sources */,
+				EF1B615C204E450800CCDE55 /* Liq_Store.xcdatamodeld in Sources */,
 				EFB432DF203CED3E00055618 /* StoresResponse.swift in Sources */,
 				EF61AC8F203AF84E00F2887D /* Extensions.swift in Sources */,
 				EF588D9620451DE70057337B /* ServingSuggestionTVCell.swift in Sources */,
+				EF1B6157204E1F0D00CCDE55 /* FilterKeys.swift in Sources */,
 				EF12E534204521A500C87440 /* SaveDrinkTVCell.swift in Sources */,
 				EF61AC92203B1D2600F2887D /* SeenVC.swift in Sources */,
 				EF588D8920449B530057337B /* DrinkImageTVCell.swift in Sources */,
@@ -630,6 +642,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF1B615A204E450800CCDE55 /* Liq_Store.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF1B615B204E450800CCDE55 /* Liq_Store.xcdatamodel */,
+			);
+			currentVersion = EF1B615B204E450800CCDE55 /* Liq_Store.xcdatamodel */;
+			path = Liq_Store.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EFEFED442033F81B001BD137 /* Project object */;
 }

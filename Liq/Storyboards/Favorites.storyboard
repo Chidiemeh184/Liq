@@ -515,9 +515,13 @@
                     <size key="freeformSize" width="375" height="1100"/>
                     <connections>
                         <outlet property="addFilterbutton" destination="28K-3g-4Lu" id="8Ij-yu-hCI"/>
+                        <outlet property="alcoholSlider" destination="VgR-de-Vzk" id="KNf-w2-8BX"/>
                         <outlet property="alcoholSliderLabel" destination="H4P-Iw-aza" id="8uP-7Z-dFv"/>
+                        <outlet property="batchStepper" destination="0RE-TU-7J9" id="5pH-RN-ao9"/>
+                        <outlet property="priceSlider" destination="F1g-Ks-oIH" id="gWq-0d-XjX"/>
                         <outlet property="priceSliderLabel" destination="VwQ-cX-mn8" id="wtj-tb-Ala"/>
                         <outlet property="returnBatchLabel" destination="qvD-FJ-R4j" id="Rlf-YB-Koo"/>
+                        <outlet property="volumeSlider" destination="jPh-wa-wRG" id="h91-AI-5h7"/>
                         <outlet property="volumeSliderLabel" destination="iLI-bi-j2O" id="PVK-o1-dIZ"/>
                     </connections>
                 </viewController>
