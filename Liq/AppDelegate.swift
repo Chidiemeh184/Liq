@@ -15,65 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let coredata = CoreDataStack()
  
-    
-//     "http://lcboapi.com/products?access_key=MDplNzUyZjc2YS0xMTU5LTExZTgtODg1MS04YjI3OWNhN2MxMWM6NHlLVGc1MWRNdFBrOWNBcmxlcHBHYWNLdWVzNnl6RlZtTmI4?page=1?per_page=150"
-    
-   // https://ACCESS_KEY:MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6@lcboapi.com/products?page=1?per_page=150
-    
-//MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-  
-//            let urlString = "https://lcboapi.com/products/300681"
-//
-//            let url = URL(string: urlString)
-//            let service = NetworkProcessor(url: url!)
-//
-//        service.downloadJSONFromURL { (result) in
-//            guard let drinksrep = result  as? DrinkResponse else { return }
-//            let result = drinksrep.result
-//            //print("Result = \(result?.count)")
-//            //print("Result = \(drinksrep)")
-//
-//            do{
-//                let jsonEncoder = JSONEncoder()
-//                let jsonData = try jsonEncoder.encode(drinksrep)
-//                let jsonString = String(data: jsonData, encoding: .utf8)
-//                print(jsonString!)
-//            }catch {
-//                fatalError("Error encoding")
-//            }
-//
-//        }
 
-   
-//
-//        let urlString = "https://lcboapi.com/stores/10/products?page=1?per_page=5"
-//
-//                let url = URL(string: urlString)
-//                let service = NetworkProcessor(url: url!)
-//
-//        service.downloadInventoriesFromURL { (stores) in
-//            guard let stores = stores as? DrinksByStore else { return }
-//            let result = stores.result
-//            print(result)
-//                print("----*********========================================********--------")
-//            
-//            
-//            do {
-//                let jsonEncoder = JSONEncoder()
-//                let invetoryData = try jsonEncoder.encode(result)
-//                //let pagerData = try jsonEncoder.encode(pager)
-//                let inventoryString = String(data: invetoryData, encoding: .utf8)
-//                //let pagerString = String(data: pagerData, encoding: .utf8)
-//                print(inventoryString)
-//                print("----*********========================================********--------")
-//                print(invetoryData)
-//                
-//            }catch {
-//                fatalError("Error ending result")
-//            }
-//            
-//        }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         
         
@@ -81,6 +24,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    
+    func checkDataStore(){
+        
+        let request : NSFetchRequest<FavDrinks> = FavDrinks.fetchRequest()
+        let moc = coredata.persistentContainer.viewContext
+        
+        do {
+            let FavDrinksCount = try moc.count(for: request)
+            if FavDrinksCount == 0 {
+                uploadSampleData()
+            }
+            
+        }catch {
+            fatalError("Error in counting home record")
+        }
+        
+    }
+    
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -105,6 +68,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.coredata.saveContext()
     }
 
+    
+    func uploadSampleData() {
+        
+        
+        let moc = coredata.persistentContainer.viewContext
+        
+        let filePath = Bundle.main.path(forResource: "store217", ofType: "json")
+        let url = URL(fileURLWithPath: filePath!)
+        
+        //OR Download data from remote server then populate coreData
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let storeJSONData = try JSONDecoder().decode(DrinksByStore.self, from: data)
+            guard let drinks = storeJSONData.result else { return }
+            
+            let favDrink = FavDrinks(context: moc)
+            
+            
+            for drink in drinks {
+                
+                let drinkToAddToFavDrinks = CDrink(context: moc)
+                
+                //Get the properties from drink and assign drinkToAddToFavDrinks
+                //Add drinkToAddToFavDrinks to the Set of drinks in favDrinks
+                //using
+                if let drinkID = drink.id {
+                    drinkToAddToFavDrinks.id = Int16(drinkID)
+                }
+               
+                
+                favDrink.addToDrinks(drinkToAddToFavDrinks)
+            }
+            
+            
+        }catch let error as NSError {
+            print("Error loading data : \(error)")
+        }
+    }
 
 
 }
