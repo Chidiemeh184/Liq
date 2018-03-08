@@ -14,11 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let coredata = CoreDataStack()
-//access_key=MDoxZGM4YzEyNC0wZGJmLTExZTgtOWY5OC0xMzBmNThhZGUyNWM6bFIyRERBRnJkYzBKQW4zcjhsYWZDdUQ4RG00VWh5SmdkMUJK
-// MDpkY2JlNzk4Mi0xMTU5LTExZTgtYTFhYy1iNzBmYWI2ZmMzOGQ6QTkydVQ3YXhWcWFmZGRDQTVFZ0xaZGxhRVRoeFJNUHA3dEFs
-// MDplMWNhOGUyMC0xMTU5LTExZTgtOTE2Yy1hYjliODk2ODY1ZjE6bTFHUGllT2taenY4RlN6MDV3ZkFhYTlYRlZ4QWF0YVZwdUVz
-// MDplNzUyZjc2YS0xMTU5LTExZTgtODg1MS04YjI3OWNhN2MxMWM6NHlLVGc1MWRNdFBrOWNBcmxlcHBHYWNLdWVzNnl6RlZtTmI4
-    
+ 
     
 //     "http://lcboapi.com/products?access_key=MDplNzUyZjc2YS0xMTU5LTExZTgtODg1MS04YjI3OWNhN2MxMWM6NHlLVGc1MWRNdFBrOWNBcmxlcHBHYWNLdWVzNnl6RlZtTmI4?page=1?per_page=150"
     
