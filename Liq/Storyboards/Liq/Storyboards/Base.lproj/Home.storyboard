@@ -31,7 +31,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Oxq-Tb-dwm">
-                                    <rect key="frame" x="16" y="7" width="343" height="40"/>
+                                    <rect key="frame" x="16" y="10" width="343" height="34"/>
                                     <segments>
                                         <segment title="Fre$h"/>
                                         <segment title="Seen"/>
@@ -44,10 +44,10 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="Oxq-Tb-dwm" firstAttribute="top" secondItem="lK8-EM-Lah" secondAttribute="top" constant="7" id="1D3-D8-ZJX"/>
-                                <constraint firstAttribute="bottom" secondItem="Oxq-Tb-dwm" secondAttribute="bottom" constant="7" id="CLP-OV-t8o"/>
-                                <constraint firstItem="Oxq-Tb-dwm" firstAttribute="leading" secondItem="lK8-EM-Lah" secondAttribute="leading" constant="16" id="pPx-cY-0Mv"/>
-                                <constraint firstAttribute="trailing" secondItem="Oxq-Tb-dwm" secondAttribute="trailing" constant="16" id="sWs-RF-l6G"/>
+                                <constraint firstItem="Oxq-Tb-dwm" firstAttribute="leading" secondItem="lK8-EM-Lah" secondAttribute="leading" constant="16" id="IvA-NO-3qd"/>
+                                <constraint firstItem="Oxq-Tb-dwm" firstAttribute="top" secondItem="lK8-EM-Lah" secondAttribute="top" constant="10" id="UIh-BW-oYV"/>
+                                <constraint firstAttribute="trailing" secondItem="Oxq-Tb-dwm" secondAttribute="trailing" constant="16" id="gaF-pG-el8"/>
+                                <constraint firstAttribute="bottom" secondItem="Oxq-Tb-dwm" secondAttribute="bottom" constant="10" id="zsq-Em-AEs"/>
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="9wS-dk-X3f">

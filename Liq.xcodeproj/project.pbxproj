@@ -11,6 +11,14 @@
 		EF12E53620452E4400C87440 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12E53520452E4400C87440 /* Segue.swift */; };
 		EF1766CA203590ED000693DF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1766C8203590ED000693DF /* Home.storyboard */; };
 		EF1766CC2035DB85000693DF /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1766CB2035DB85000693DF /* Favorites.storyboard */; };
+		EF19EEA9205133B900884093 /* FreshDrinks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19EEA1205133B900884093 /* FreshDrinks+CoreDataClass.swift */; };
+		EF19EEAA205133B900884093 /* FreshDrinks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19EEA2205133B900884093 /* FreshDrinks+CoreDataProperties.swift */; };
+		EF19EEAB205133B900884093 /* SeenDrinks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19EEA3205133B900884093 /* SeenDrinks+CoreDataClass.swift */; };
+		EF19EEAC205133B900884093 /* SeenDrinks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19EEA4205133B900884093 /* SeenDrinks+CoreDataProperties.swift */; };
+		EF19EEAD205133B900884093 /* CDrink+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19EEA5205133B900884093 /* CDrink+CoreDataClass.swift */; };
+		EF19EEAE205133B900884093 /* CDrink+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19EEA6205133B900884093 /* CDrink+CoreDataProperties.swift */; };
+		EF19EEAF205133B900884093 /* FavDrinks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19EEA7205133B900884093 /* FavDrinks+CoreDataClass.swift */; };
+		EF19EEB0205133B900884093 /* FavDrinks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19EEA8205133B900884093 /* FavDrinks+CoreDataProperties.swift */; };
 		EF1B6157204E1F0D00CCDE55 /* FilterKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1B6156204E1F0D00CCDE55 /* FilterKeys.swift */; };
 		EF1B615C204E450800CCDE55 /* Liq_Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF1B615A204E450800CCDE55 /* Liq_Store.xcdatamodeld */; };
 		EF1B615E204E452C00CCDE55 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1B615D204E452C00CCDE55 /* CoreDataStack.swift */; };
@@ -67,6 +75,14 @@
 		EF12E53520452E4400C87440 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		EF1766C9203590ED000693DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Liq/Storyboards/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		EF1766CB2035DB85000693DF /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		EF19EEA1205133B900884093 /* FreshDrinks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FreshDrinks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EF19EEA2205133B900884093 /* FreshDrinks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FreshDrinks+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EF19EEA3205133B900884093 /* SeenDrinks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeenDrinks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EF19EEA4205133B900884093 /* SeenDrinks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeenDrinks+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EF19EEA5205133B900884093 /* CDrink+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDrink+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EF19EEA6205133B900884093 /* CDrink+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDrink+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EF19EEA7205133B900884093 /* FavDrinks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavDrinks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EF19EEA8205133B900884093 /* FavDrinks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavDrinks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EF1B6156204E1F0D00CCDE55 /* FilterKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterKeys.swift; sourceTree = "<group>"; };
 		EF1B615B204E450800CCDE55 /* Liq_Store.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Liq_Store.xcdatamodel; sourceTree = "<group>"; };
 		EF1B615D204E452C00CCDE55 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -149,6 +165,21 @@
 				EF3BC71020399E4500B1854B /* HomeTVC.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		EF19EE90205132B800884093 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EF19EEA1205133B900884093 /* FreshDrinks+CoreDataClass.swift */,
+				EF19EEA2205133B900884093 /* FreshDrinks+CoreDataProperties.swift */,
+				EF19EEA3205133B900884093 /* SeenDrinks+CoreDataClass.swift */,
+				EF19EEA4205133B900884093 /* SeenDrinks+CoreDataProperties.swift */,
+				EF19EEA5205133B900884093 /* CDrink+CoreDataClass.swift */,
+				EF19EEA6205133B900884093 /* CDrink+CoreDataProperties.swift */,
+				EF19EEA7205133B900884093 /* FavDrinks+CoreDataClass.swift */,
+				EF19EEA8205133B900884093 /* FavDrinks+CoreDataProperties.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		EF362DD0204AE91400501047 /* Filters */ = {
@@ -293,6 +324,7 @@
 		EFEFED642033F929001BD137 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF19EE90205132B800884093 /* Entity */,
 				EF61AC89203AF25B00F2887D /* data.json */,
 				EF61ACA0203B9A0800F2887D /* store217.json */,
 				EFB432E0203F949800055618 /* store38.json */,
@@ -427,7 +459,9 @@
 				EF588D8F2044D0D20057337B /* InformationTVCell.swift in Sources */,
 				EF1B615E204E452C00CCDE55 /* CoreDataStack.swift in Sources */,
 				EF61AC9A203B26E800F2887D /* Result.swift in Sources */,
+				EF19EEAE205133B900884093 /* CDrink+CoreDataProperties.swift in Sources */,
 				EF61AC88203AE99D00F2887D /* FreshCVCell.swift in Sources */,
+				EF19EEAF205133B900884093 /* FavDrinks+CoreDataClass.swift in Sources */,
 				EFCF25FB203BFCF700AE58D6 /* ListVCell.swift in Sources */,
 				EF61AC8D203AF48700F2887D /* ShadowView.swift in Sources */,
 				EF61AC98203B239500F2887D /* Pager.swift in Sources */,
@@ -438,15 +472,21 @@
 				EFB432DF203CED3E00055618 /* StoresResponse.swift in Sources */,
 				EF61AC8F203AF84E00F2887D /* Extensions.swift in Sources */,
 				EF588D9620451DE70057337B /* ServingSuggestionTVCell.swift in Sources */,
+				EF19EEAC205133B900884093 /* SeenDrinks+CoreDataProperties.swift in Sources */,
 				EF1B6157204E1F0D00CCDE55 /* FilterKeys.swift in Sources */,
 				EF12E534204521A500C87440 /* SaveDrinkTVCell.swift in Sources */,
+				EF19EEAB205133B900884093 /* SeenDrinks+CoreDataClass.swift in Sources */,
 				EF61AC92203B1D2600F2887D /* SeenVC.swift in Sources */,
 				EF588D8920449B530057337B /* DrinkImageTVCell.swift in Sources */,
+				EF19EEA9205133B900884093 /* FreshDrinks+CoreDataClass.swift in Sources */,
 				EF61AC96203B22CA00F2887D /* Inventories.swift in Sources */,
 				EF61AC86203AE93800F2887D /* FreshVC.swift in Sources */,
 				EF3BC71120399E4500B1854B /* HomeTVC.swift in Sources */,
 				EF12E53620452E4400C87440 /* Segue.swift in Sources */,
 				EF61ACA3203B9BF500F2887D /* FavTVC.swift in Sources */,
+				EF19EEAA205133B900884093 /* FreshDrinks+CoreDataProperties.swift in Sources */,
+				EF19EEB0205133B900884093 /* FavDrinks+CoreDataProperties.swift in Sources */,
+				EF19EEAD205133B900884093 /* CDrink+CoreDataClass.swift in Sources */,
 				EFB432DD203CEC6F00055618 /* DrinksByStore.swift in Sources */,
 				EF588D852043E39E0057337B /* DetailOpenTVC.swift in Sources */,
 				EFEFED6A2034094D001BD137 /* NetworkProcessor.swift in Sources */,
