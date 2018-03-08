@@ -51,16 +51,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvc-2I-Beh">
-                                    <rect key="frame" x="137.5" y="17" width="30" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="30" id="ik3-rL-fav"/>
-                                    </constraints>
-                                    <state key="normal" title="Button" image="beerList"/>
-                                    <connections>
-                                        <action selector="listButtonTapped:" destination="p1B-4Y-aZe" eventType="touchUpInside" id="pCY-Qr-KqX"/>
-                                    </connections>
-                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFt-zf-Cr2">
                                     <rect key="frame" x="207.5" y="17" width="30" height="30"/>
                                     <constraints>
@@ -72,14 +62,25 @@
                                         <action selector="gridButtonTapped:" destination="p1B-4Y-aZe" eventType="touchUpInside" id="SJP-4I-fjQ"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvc-2I-Beh">
+                                    <rect key="frame" x="137" y="23" width="30" height="19"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="19" id="BjN-cv-qGO"/>
+                                        <constraint firstAttribute="width" constant="30" id="rjl-1R-h5c"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="beerList"/>
+                                    <connections>
+                                        <action selector="listButtonTapped:" destination="p1B-4Y-aZe" eventType="touchUpInside" id="pCY-Qr-KqX"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="lvc-2I-Beh" firstAttribute="top" secondItem="8IE-0f-kCU" secondAttribute="top" constant="17" id="KbH-Xa-LNz"/>
+                                <constraint firstItem="lvc-2I-Beh" firstAttribute="leading" secondItem="8IE-0f-kCU" secondAttribute="leading" constant="137" id="03U-mS-Q1v"/>
+                                <constraint firstAttribute="bottom" secondItem="lvc-2I-Beh" secondAttribute="bottom" constant="17" id="MXX-kz-0yh"/>
                                 <constraint firstAttribute="trailing" secondItem="RFt-zf-Cr2" secondAttribute="trailing" constant="137.5" id="Mzc-Zw-lge"/>
-                                <constraint firstItem="lvc-2I-Beh" firstAttribute="leading" secondItem="8IE-0f-kCU" secondAttribute="leading" constant="137.5" id="RSG-be-62Z"/>
                                 <constraint firstItem="RFt-zf-Cr2" firstAttribute="top" secondItem="8IE-0f-kCU" secondAttribute="top" constant="17" id="Y7t-BW-HSt"/>
-                                <constraint firstAttribute="bottom" secondItem="lvc-2I-Beh" secondAttribute="bottom" constant="12" id="aSD-kc-dI7"/>
+                                <constraint firstItem="lvc-2I-Beh" firstAttribute="top" secondItem="8IE-0f-kCU" secondAttribute="top" constant="23" id="Yps-Vb-mkq"/>
                                 <constraint firstAttribute="bottom" secondItem="RFt-zf-Cr2" secondAttribute="bottom" constant="12" id="hLL-eg-RC0"/>
                             </constraints>
                         </view>
