@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        
+        //
+        print("testing")
         
         
         return true
@@ -72,40 +73,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func uploadSampleData() {
         
         
-        let moc = coredata.persistentContainer.viewContext
-        
-        let filePath = Bundle.main.path(forResource: "store217", ofType: "json")
-        let url = URL(fileURLWithPath: filePath!)
-        
-        //OR Download data from remote server then populate coreData
-        
-        do {
-            let data = try Data(contentsOf: url)
-            let storeJSONData = try JSONDecoder().decode(DrinksByStore.self, from: data)
-            guard let drinks = storeJSONData.result else { return }
-            
-            let favDrink = FavDrinks(context: moc)
-            
-            
-            for drink in drinks {
-                
-                let drinkToAddToFavDrinks = CDrink(context: moc)
-                
-                //Get the properties from drink and assign drinkToAddToFavDrinks
-                //Add drinkToAddToFavDrinks to the Set of drinks in favDrinks
-                //using
-                if let drinkID = drink.id {
-                    drinkToAddToFavDrinks.id = Int16(drinkID)
-                }
-               
-                
-                favDrink.addToDrinks(drinkToAddToFavDrinks)
-            }
-            
-            
-        }catch let error as NSError {
-            print("Error loading data : \(error)")
-        }
+//        let moc = coredata.persistentContainer.viewContext
+//        
+//        let filePath = Bundle.main.path(forResource: "store217", ofType: "json")
+//        let url = URL(fileURLWithPath: filePath!)
+//        
+//        //OR Download data from remote server then populate coreData
+//        
+//        do {
+//            let data = try Data(contentsOf: url)
+//            let storeJSONData = try JSONDecoder().decode(DrinksByStore.self, from: data)
+//            guard let drinks = storeJSONData.result else { return }
+//            
+//            let favDrink = FavDrinks(context: moc)
+//            
+//            
+//            for drink in drinks {
+//                
+//                let drinkToAddToFavDrinks = CDrink(context: moc)
+//                
+//                //Get the properties from drink and assign drinkToAddToFavDrinks
+//                //Add drinkToAddToFavDrinks to the Set of drinks in favDrinks
+//                //using
+//                if let drinkID = drink.id {
+//                    drinkToAddToFavDrinks.id = Int16(drinkID)
+//                }
+//               
+//                
+//                favDrink.addToDrinks(drinkToAddToFavDrinks)
+//            }
+//            
+//              coredata.saveContext()
+//            
+//        }catch let error as NSError {
+//            print("Error loading datat to coredata : \(error)")
+//        }
     }
 
 
