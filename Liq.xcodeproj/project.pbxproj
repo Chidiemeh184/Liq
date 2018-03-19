@@ -22,6 +22,7 @@
 		EF1B6157204E1F0D00CCDE55 /* FilterKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1B6156204E1F0D00CCDE55 /* FilterKeys.swift */; };
 		EF1B615C204E450800CCDE55 /* Liq_Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF1B615A204E450800CCDE55 /* Liq_Store.xcdatamodeld */; };
 		EF1B615E204E452C00CCDE55 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1B615D204E452C00CCDE55 /* CoreDataStack.swift */; };
+		EF1D94B520601AF600F30427 /* HelperFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1D94B420601AF600F30427 /* HelperFunction.swift */; };
 		EF362DD8204BE49400501047 /* FiltersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF362DD7204BE49400501047 /* FiltersVC.swift */; };
 		EF362DDA204C2C8300501047 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF362DD9204C2C8300501047 /* ToggleButton.swift */; };
 		EF362DDC204C2CD100501047 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF362DDB204C2CD100501047 /* Constants.swift */; };
@@ -86,6 +87,7 @@
 		EF1B6156204E1F0D00CCDE55 /* FilterKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterKeys.swift; sourceTree = "<group>"; };
 		EF1B615B204E450800CCDE55 /* Liq_Store.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Liq_Store.xcdatamodel; sourceTree = "<group>"; };
 		EF1B615D204E452C00CCDE55 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		EF1D94B420601AF600F30427 /* HelperFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunction.swift; sourceTree = "<group>"; };
 		EF362DD7204BE49400501047 /* FiltersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersVC.swift; sourceTree = "<group>"; };
 		EF362DD9204C2C8300501047 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		EF362DDB204C2CD100501047 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -190,6 +192,14 @@
 				EF19EE90205132B800884093 /* Entity */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EF1D94B320601A7A00F30427 /* Helper Functions */ = {
+			isa = PBXGroup;
+			children = (
+				EF1D94B420601AF600F30427 /* HelperFunction.swift */,
+			);
+			path = "Helper Functions";
 			sourceTree = "<group>";
 		};
 		EF362DD0204AE91400501047 /* Filters */ = {
@@ -319,6 +329,7 @@
 				EF61AC802039C86C00F2887D /* Fresh */,
 				EF61AC90203B1CDE00F2887D /* Seen */,
 				EF61AC9B203B985F00F2887D /* Fav */,
+				EF1D94B320601A7A00F30427 /* Helper Functions */,
 				EFEFED642033F929001BD137 /* Model */,
 				EFEFED4F2033F81B001BD137 /* AppDelegate.swift */,
 				EFEFED512033F81B001BD137 /* ViewController.swift */,
@@ -496,6 +507,7 @@
 				EF19EEB0205133B900884093 /* FavDrinks+CoreDataProperties.swift in Sources */,
 				EF19EEAD205133B900884093 /* CDrink+CoreDataClass.swift in Sources */,
 				EFB432DD203CEC6F00055618 /* DrinksByStore.swift in Sources */,
+				EF1D94B520601AF600F30427 /* HelperFunction.swift in Sources */,
 				EF588D852043E39E0057337B /* DetailOpenTVC.swift in Sources */,
 				EFEFED6A2034094D001BD137 /* NetworkProcessor.swift in Sources */,
 			);

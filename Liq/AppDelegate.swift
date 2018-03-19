@@ -88,9 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 //Single Core Data drink
                 let coreDataDrink = CDrink(context: moc)
                 
-                
-                guard let alcohol = drink.alcoholContent else { return }
-               // coreDataDrink.alcoholContent =
+                let convertedDrink = HelperFunction.assignMOCValuesToDrink(cDrink: coreDataDrink, drink: drink)
                 
                 
             }
