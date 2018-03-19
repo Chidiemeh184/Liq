@@ -182,6 +182,16 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		EF1D94B120600B9800F30427 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EF1B615D204E452C00CCDE55 /* CoreDataStack.swift */,
+				EF1B615A204E450800CCDE55 /* Liq_Store.xcdatamodeld */,
+				EF19EE90205132B800884093 /* Entity */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		EF362DD0204AE91400501047 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,12 +334,10 @@
 		EFEFED642033F929001BD137 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EF19EE90205132B800884093 /* Entity */,
+				EF1D94B120600B9800F30427 /* CoreData */,
 				EF61AC89203AF25B00F2887D /* data.json */,
 				EF61ACA0203B9A0800F2887D /* store217.json */,
 				EFB432E0203F949800055618 /* store38.json */,
-				EF1B615A204E450800CCDE55 /* Liq_Store.xcdatamodeld */,
-				EF1B615D204E452C00CCDE55 /* CoreDataStack.swift */,
 				EF3BC71420399F1000B1854B /* Enumerations */,
 				EFEFED652033F951001BD137 /* API */,
 			);

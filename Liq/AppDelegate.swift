@@ -13,70 +13,11 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let coredata = CoreDataStack()
+    let coreDataStack = CoreDataStack()
  
-    
-//     "http://lcboapi.com/products?access_key=MDplNzUyZjc2YS0xMTU5LTExZTgtODg1MS04YjI3OWNhN2MxMWM6NHlLVGc1MWRNdFBrOWNBcmxlcHBHYWNLdWVzNnl6RlZtTmI4?page=1?per_page=150"
-    
-   // https://ACCESS_KEY:MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6@lcboapi.com/products?page=1?per_page=150
-    
-//MDo0OTA5MjJiMC0xMzhkLTExZTgtOGM4Mi05M2I5OWRkNWFkYzk6VjBEMUNrNXBzZVl4VWp0aHVzMDNhVUpVaGZyRlNYbkdndVN6
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-  
-//            let urlString = "https://lcboapi.com/products/300681"
-//
-//            let url = URL(string: urlString)
-//            let service = NetworkProcessor(url: url!)
-//
-//        service.downloadJSONFromURL { (result) in
-//            guard let drinksrep = result  as? DrinkResponse else { return }
-//            let result = drinksrep.result
-//            //print("Result = \(result?.count)")
-//            //print("Result = \(drinksrep)")
-//
-//            do{
-//                let jsonEncoder = JSONEncoder()
-//                let jsonData = try jsonEncoder.encode(drinksrep)
-//                let jsonString = String(data: jsonData, encoding: .utf8)
-//                print(jsonString!)
-//            }catch {
-//                fatalError("Error encoding")
-//            }
-//
-//        }
 
-   
-//
-//        let urlString = "https://lcboapi.com/stores/10/products?page=1?per_page=5"
-//
-//                let url = URL(string: urlString)
-//                let service = NetworkProcessor(url: url!)
-//
-//        service.downloadInventoriesFromURL { (stores) in
-//            guard let stores = stores as? DrinksByStore else { return }
-//            let result = stores.result
-//            print(result)
-//                print("----*********========================================********--------")
-//            
-//            
-//            do {
-//                let jsonEncoder = JSONEncoder()
-//                let invetoryData = try jsonEncoder.encode(result)
-//                //let pagerData = try jsonEncoder.encode(pager)
-//                let inventoryString = String(data: invetoryData, encoding: .utf8)
-//                //let pagerString = String(data: pagerData, encoding: .utf8)
-//                print(inventoryString)
-//                print("----*********========================================********--------")
-//                print(invetoryData)
-//                
-//            }catch {
-//                fatalError("Error ending result")
-//            }
-//            
-//        }
-
-        
-        
+        checkDataStore()
         
         return true
     }
@@ -102,7 +43,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.coredata.saveContext()
+        self.coreDataStack.saveContext()
+    }
+    
+    
+    
+    func checkDataStore(){
+        
+        let request : NSFetchRequest<FavDrinks> = FavDrinks.fetchRequest()
+        let moc = coreDataStack.persistentContainer.viewContext
+        
+        do {
+            let favDrinkCount = try moc.count(for: request)
+            if favDrinkCount == 0 {
+                print("FavDrink Count = \(favDrinkCount)")
+                uploadSampleFavDrinks()
+                
+            }else if favDrinkCount > 1 {
+                print("FavDrink Count = \(favDrinkCount)")
+            }
+        }catch {
+            fatalError("Error in counting home record")
+        }
+    }
+    
+    
+    func uploadSampleFavDrinks(){
+        let moc = coreDataStack.persistentContainer.viewContext
+        let filePath = Bundle.main.path(forResource: "store217", ofType: "json")
+        let url = URL(fileURLWithPath: filePath!)
+        do {
+            let data = try Data(contentsOf: url)
+            
+            let storeJSONData = try JSONDecoder().decode(DrinksByStore.self, from: data)
+            guard let drinks = storeJSONData.result else { return }
+            
+            //FavDrinks Initialization
+            let favoriteDrinks = FavDrinks(context: moc)
+            let favDrinkData = favoriteDrinks.drinks?.mutableCopy() as! NSMutableSet
+
+            
+            for drink in drinks {
+                
+                //Single Core Data drink
+                let coreDataDrink = CDrink(context: moc)
+                
+                
+                guard let alcohol = drink.alcoholContent else { return }
+               // coreDataDrink.alcoholContent =
+                
+                
+            }
+            
+            
+            
+            print("Drinks loaded : \(drinks.count)")
+        }catch let error as NSError {
+            print("Error loading data : \(error)")
+        }
     }
 
 
