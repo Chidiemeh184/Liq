@@ -13,43 +13,15 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-<<<<<<< HEAD
     let coreDataStack = CoreDataStack()
  
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         checkDataStore()
-=======
-    let coredata = CoreDataStack()
- 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        //
-        print("testing")
-        
->>>>>>> 6f316c5a8e7d13df5fbfc3c9fc2f021d92e5246f
-        
         return true
     }
 
-    
-    func checkDataStore(){
-        
-        let request : NSFetchRequest<FavDrinks> = FavDrinks.fetchRequest()
-        let moc = coredata.persistentContainer.viewContext
-        
-        do {
-            let FavDrinksCount = try moc.count(for: request)
-            if FavDrinksCount == 0 {
-                uploadSampleData()
-            }
-            
-        }catch {
-            fatalError("Error in counting home record")
-        }
-        
-    }
     
     
     
