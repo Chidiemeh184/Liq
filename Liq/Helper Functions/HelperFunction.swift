@@ -17,7 +17,7 @@ class HelperFunction {
         
         cDrink.alcoholContent = (drink.alcoholContent != nil) ? Int16(drink.alcoholContent!) : Int16(0)
         cDrink.bonusRewardMiles = (drink.bonusRewardMiles != nil) ? Int16(drink.bonusRewardMiles!) : Int16(0)
-        
+                cDrink.bonusRewardMilesEndsOn = (drink.bonusRewardMilesEndsOn != nil) ? Int16(drink.bonusRewardMilesEndsOn!) : Int16(0)
         
         return cDrink
     }
