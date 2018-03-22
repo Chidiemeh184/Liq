@@ -47,7 +47,7 @@ struct Drink : Codable {
     var isOcb : Bool?
     var isKosher : Bool?
     var valueAddedPromotionDescription : String?   // n/a
-    var description : String?       // n/a
+    var description : String?       // named itemDescription for CoreData
     var servingSuggestion : String?
     var tastingNote : String?
     var updatedAt : String?

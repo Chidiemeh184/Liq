@@ -52,17 +52,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func checkDataStore(){
         
-        let request : NSFetchRequest<FavDrinks> = FavDrinks.fetchRequest()
+        let request : NSFetchRequest<SeenDrinks> = SeenDrinks.fetchRequest()
         let moc = coreDataStack.persistentContainer.viewContext
         
         do {
             let favDrinkCount = try moc.count(for: request)
             if favDrinkCount == 0 {
-                print("FavDrink Count = \(favDrinkCount)")
+                print("Items in FavDrink coreData = \(favDrinkCount)")
                 uploadSampleFavDrinks()
                 
             }else if favDrinkCount > 1 {
-                print("FavDrink Count = \(favDrinkCount)")
+                print("Items in FavDrink coreData = \(favDrinkCount)")
             }
         }catch {
             fatalError("Error in counting home record")
@@ -85,19 +85,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let favDrinkData = favoriteDrinks.drinks?.mutableCopy() as! NSMutableSet
 
             
+            
             for drink in drinks {
-                
-                //Single Core Data drink
+                //Populate favDrinkData
                 let coreDataDrink = CDrink(context: moc)
+                let convertedDrink = HelperFunction.assignDrinkToCDrink(cDrink: coreDataDrink, drink: drink)
+                favDrinkData.add(convertedDrink)
                 
-                let convertedDrink = HelperFunction.assignMOCValuesToDrink(cDrink: coreDataDrink, drink: drink)
-                
-                
+                //Add set of Drinks
+                favoriteDrinks.addToDrinks(favDrinkData)
             }
+
             
             
-            
-            print("Drinks loaded : \(drinks.count)")
+            print("Sample Drinks loaded... Count : \(drinks.count)")
         }catch let error as NSError {
             print("Error loading data : \(error)")
         }
