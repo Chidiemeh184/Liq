@@ -52,8 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func checkDataStore(){
         
-        let request : NSFetchRequest<SeenDrinks> = SeenDrinks.fetchRequest()
+        let request : NSFetchRequest<FavDrinks> = FavDrinks.fetchRequest()
         let moc = coreDataStack.persistentContainer.viewContext
+        
         
         do {
             let favDrinkCount = try moc.count(for: request)
@@ -62,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 uploadSampleFavDrinks()
                 
             }else if favDrinkCount > 1 {
-                print("Items in FavDrink coreData = \(favDrinkCount)")
+                print("Drinks already loaded before = \(favDrinkCount)")
             }
         }catch {
             fatalError("Error in counting home record")
@@ -96,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 favoriteDrinks.addToDrinks(favDrinkData)
             }
 
-            
+                try moc.save()
             
             print("Sample Drinks loaded... Count : \(drinks.count)")
         }catch let error as NSError {

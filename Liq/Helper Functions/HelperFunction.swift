@@ -20,9 +20,9 @@ class HelperFunction {
         cDrink.bonusRewardMilesEndsOn = (drink.bonusRewardMilesEndsOn != nil) ? Int32(drink.bonusRewardMilesEndsOn!) : Int32(0)
         cDrink.clearanceSaleSavingsInCents =  (drink.clearanceSaleSavingsInCents != nil) ? Int32(drink.clearanceSaleSavingsInCents!) : Int32(0)
         cDrink.hasBonusRewardMiles = drink.hasBonusRewardMiles! ? true : false
-        cDrink.hasClearanceSale = drink.hasClearanceSale!
-        cDrink.hasLimitedTimeOffer = drink.hasLimitedTimeOffer!
-        cDrink.hasValueAddedPromotion = drink.hasValueAddedPromotion!
+        cDrink.hasClearanceSale = drink.hasClearanceSale! ? true : false
+        cDrink.hasLimitedTimeOffer = drink.hasLimitedTimeOffer! ? true : false
+        cDrink.hasValueAddedPromotion = drink.hasValueAddedPromotion! ? true : false
         
        cDrink.id = (drink.id != nil) ? Int32(drink.id!) : Int32(0)
         
@@ -32,12 +32,12 @@ class HelperFunction {
         cDrink.inventoryCount = (drink.inventoryCount != nil) ? Int32(drink.inventoryCount!) : Int32(0)
         cDrink.inventoryPriceInCents = (drink.inventoryPriceInCents != nil) ? Int32(drink.inventoryPriceInCents!) : Int32(0)
         cDrink.inventoryVolumeInMilliliters = (drink.inventoryVolumeInMilliliters != nil) ? Int32(drink.inventoryVolumeInMilliliters!) : Int32(0)
-        cDrink.isDead = drink.isDead!
-        cDrink.isDiscontinued = drink.isDiscontinued!
-        cDrink.isKosher = drink.isKosher!
-        cDrink.isOcb = drink.isOcb!
-        cDrink.isSeasonal = drink.isSeasonal!
-        cDrink.isVqa = drink.isVqa!
+        cDrink.isDead = (drink.isDead != nil) ? true : false
+        cDrink.isDiscontinued = (drink.isDiscontinued != nil) ? true : false
+        cDrink.isKosher = (drink.isKosher != nil) ? true : false
+        cDrink.isOcb = (drink.isOcb != nil) ? true : false
+        cDrink.isSeasonal = (drink.isSeasonal != nil) ? true : false
+        cDrink.isVqa = (drink.isVqa != nil) ? true : false
         cDrink.itemDescription = drink.description
         cDrink.limitedTimeOfferEndsOn = drink.limitedTimeOfferEndsOn
         cDrink.limitedTimeOfferSavingsInCents = (drink.limitedTimeOfferSavingsInCents != nil) ? Int32(drink.limitedTimeOfferSavingsInCents!) : Int32(0)
