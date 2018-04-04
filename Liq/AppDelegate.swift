@@ -108,7 +108,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func uploadSampleData() {
         
-        
 //        let moc = coredata.persistentContainer.viewContext
 //        
 //        let filePath = Bundle.main.path(forResource: "store217", ofType: "json")

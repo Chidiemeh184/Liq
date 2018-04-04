@@ -57,7 +57,7 @@ extension DetailOpenTVC {
 extension DetailOpenTVC  {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let customHidingHeight = CGFloat(0)
+        let customHidingHeight = CGFloat(0.0)
         let informationCellHeight = CGFloat(61)
         let saveDrinkCellHeight = CGFloat(81)
         let drinkImageTVCellHeight = CGFloat(304)

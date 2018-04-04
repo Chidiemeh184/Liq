@@ -52,7 +52,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFt-zf-Cr2">
-                                    <rect key="frame" x="207.5" y="17" width="30" height="30"/>
+                                    <rect key="frame" x="208" y="17" width="30" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="26c-Ue-fTz"/>
                                         <constraint firstAttribute="width" constant="30" id="rDr-Uc-NlA"/>
@@ -76,12 +76,10 @@
                             </subviews>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="lvc-2I-Beh" firstAttribute="leading" secondItem="8IE-0f-kCU" secondAttribute="leading" constant="137" id="03U-mS-Q1v"/>
-                                <constraint firstAttribute="bottom" secondItem="lvc-2I-Beh" secondAttribute="bottom" constant="17" id="MXX-kz-0yh"/>
-                                <constraint firstAttribute="trailing" secondItem="RFt-zf-Cr2" secondAttribute="trailing" constant="137.5" id="Mzc-Zw-lge"/>
-                                <constraint firstItem="RFt-zf-Cr2" firstAttribute="top" secondItem="8IE-0f-kCU" secondAttribute="top" constant="17" id="Y7t-BW-HSt"/>
-                                <constraint firstItem="lvc-2I-Beh" firstAttribute="top" secondItem="8IE-0f-kCU" secondAttribute="top" constant="23" id="Yps-Vb-mkq"/>
-                                <constraint firstAttribute="bottom" secondItem="RFt-zf-Cr2" secondAttribute="bottom" constant="12" id="hLL-eg-RC0"/>
+                                <constraint firstItem="RFt-zf-Cr2" firstAttribute="leading" secondItem="lvc-2I-Beh" secondAttribute="trailing" constant="41" id="1bx-eL-Fg5"/>
+                                <constraint firstItem="lvc-2I-Beh" firstAttribute="centerY" secondItem="RFt-zf-Cr2" secondAttribute="centerY" id="DsN-qY-jNp"/>
+                                <constraint firstItem="lvc-2I-Beh" firstAttribute="top" secondItem="8IE-0f-kCU" secondAttribute="top" constant="23" id="FMu-Ln-fv6"/>
+                                <constraint firstItem="lvc-2I-Beh" firstAttribute="leading" secondItem="8IE-0f-kCU" secondAttribute="leading" constant="137" id="HFS-Ut-9ih"/>
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="lxy-6M-xAv">
